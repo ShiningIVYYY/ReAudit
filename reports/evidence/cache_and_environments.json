@@ -1,0 +1,1453 @@
+{
+  "cache_environment": {
+    "HF_HOME": null,
+    "HUGGINGFACE_HUB_CACHE": null,
+    "HF_HUB_CACHE": null,
+    "TRANSFORMERS_CACHE": null,
+    "XDG_CACHE_HOME": null
+  },
+  "scanned_directories": [
+    {
+      "path": "/data1/chz/.cache",
+      "exists": true,
+      "children": [],
+      "error": "Permission denied"
+    },
+    {
+      "path": "/data1/chz/models",
+      "exists": true,
+      "children": [
+        "Llama-3.1-8B-Instruct",
+        "huggingface",
+        "modelscope"
+      ]
+    },
+    {
+      "path": "/data1/chz/project-qwen-vl",
+      "exists": true,
+      "children": [
+        "docs",
+        "prepared",
+        "readme.md",
+        "sam2_full_white",
+        "sample_submission.csv",
+        "scripts",
+        "test_images",
+        "tests",
+        "train_images",
+        "train_labels.csv",
+        "vendor"
+      ]
+    },
+    {
+      "path": "/data1/ghchen/models",
+      "exists": true,
+      "children": [
+        "Meta-Llama-3-8B",
+        "Meta-Llama-3-8B-Instruct",
+        "MiniCPM-2B-dpo-bf16",
+        "PandaLM-7B-v1",
+        "Starling-RM-7B-alpha",
+        "chat_templates",
+        "deepseek-coder-6.7b-instruct",
+        "gemma-2b-it",
+        "sqlcoder-7b-2"
+      ]
+    },
+    {
+      "path": "/data1/laip/models",
+      "exists": true,
+      "children": [
+        "._____temp",
+        ".lock",
+        ".locks",
+        "LLM-Research",
+        "Qwen",
+        "damo",
+        "dienstag",
+        "google-bert",
+        "iic",
+        "lllllp1"
+      ]
+    },
+    {
+      "path": "/data1/lmy/models",
+      "exists": true,
+      "children": [
+        "Qwen3.5-9B"
+      ]
+    },
+    {
+      "path": "/data1/lsq/models",
+      "exists": true,
+      "children": [
+        "BAAI",
+        "BAAI_bge-m3.download.log",
+        "FremyCompany",
+        "FremyCompany_BioLORD-2023.download.log",
+        "Qwen",
+        "dmis-lab",
+        "hongzhouyu",
+        "medicalai",
+        "ncbi",
+        "sentence-transformers",
+        "sentence-transformers_paraphrase-MiniLM-L6-v2.download.log"
+      ]
+    },
+    {
+      "path": "/data1/lyx2/CACHE",
+      "exists": true,
+      "children": [
+        "huggingface"
+      ]
+    },
+    {
+      "path": "/data1/lyx2/MODELS",
+      "exists": true,
+      "children": []
+    },
+    {
+      "path": "/data1/lyx_docker/CACHE",
+      "exists": true,
+      "children": [
+        "huggingface"
+      ]
+    },
+    {
+      "path": "/data1/rzw/cache",
+      "exists": true,
+      "children": [
+        "huggingface"
+      ]
+    },
+    {
+      "path": "/data1/shn/.cache/huggingface/hub",
+      "exists": false,
+      "children": []
+    },
+    {
+      "path": "/data1/shn/models",
+      "exists": true,
+      "children": []
+    },
+    {
+      "path": "/data1/wty/models",
+      "exists": true,
+      "children": [
+        "download.sh",
+        "modelscope.sh"
+      ]
+    },
+    {
+      "path": "/data1/wwx/01.models",
+      "exists": true,
+      "children": [
+        "slm"
+      ]
+    },
+    {
+      "path": "/data1/wwx/models",
+      "exists": true,
+      "children": [
+        "Qwen3-0.6B"
+      ]
+    },
+    {
+      "path": "/data1/xby/cache",
+      "exists": true,
+      "children": [
+        "hf_cache"
+      ]
+    },
+    {
+      "path": "/data1/xdl/model",
+      "exists": true,
+      "children": [
+        "._____temp",
+        ".bashrcexport",
+        "Llama-2-13b-hf",
+        "Llama-2-7b-hf",
+        "Meta-Llama-3.1-8B-Instruct",
+        "Qwen",
+        "Qwen1.5-0.5B",
+        "Qwen1.5-1.8B",
+        "gte-multilingual-base",
+        "multilingual-e5-large-instruct"
+      ]
+    },
+    {
+      "path": "/data1/xxz/.pip_cache",
+      "exists": true,
+      "children": [
+        "http-v2",
+        "selfcheck"
+      ]
+    },
+    {
+      "path": "/data1/xxz/models",
+      "exists": true,
+      "children": [
+        "Qwen3-4B",
+        "Qwen3-8B-Base",
+        "Qwen3.6-27B"
+      ]
+    },
+    {
+      "path": "/data1/zhe2/huggingface_model",
+      "exists": true,
+      "children": [
+        "._____temp",
+        "GanymedeNil_text2vec-base-chinese",
+        "LLM-Research",
+        "Mistral-7B-Instruct-v0.2",
+        "Qwen",
+        "ZhipuAI",
+        "all-MiniLM-L6-v2",
+        "bert-base-uncased",
+        "chatglm3-6b",
+        "chatglm3-6b-base",
+        "deepseek-ai",
+        "llama-2-13b",
+        "llama-2-13b-chat",
+        "llama-2-7b",
+        "llama-2-7b-chat",
+        "models--facebook--opt-350m",
+        "models--microsoft--deberta-large-mnli",
+        "paraphrase-multilingual-MiniLM-L12-v2",
+        "reward-model-deberta-v3-large-v2",
+        "sentence-transformers_all-MiniLM-L6-v2",
+        "temp"
+      ]
+    },
+    {
+      "path": "/data1/zhe2/merge_model",
+      "exists": true,
+      "children": [
+        "hb_final_positive-non-chat"
+      ]
+    },
+    {
+      "path": "/data1/zhw/.uv-cache",
+      "exists": true,
+      "children": [
+        ".gitignore",
+        ".lock",
+        "CACHEDIR.TAG",
+        "archive-v0",
+        "interpreter-v4",
+        "sdists-v9",
+        "simple-v21",
+        "wheels-v6"
+      ]
+    },
+    {
+      "path": "/data1/zhw/huggingface",
+      "exists": true,
+      "children": [
+        ".agent_harnesses.json",
+        "hub"
+      ]
+    },
+    {
+      "path": "/data1/zhw/models",
+      "exists": true,
+      "children": [
+        "Qwen3-0.6B",
+        "Qwen3-VL-32B-Instruct-FP8",
+        "Qwen3.8-27B",
+        "UnifiedReward-Flex-qwen3vl-8b"
+      ]
+    },
+    {
+      "path": "/data1/zhw/modelscope_cache",
+      "exists": true,
+      "children": [
+        ".lock"
+      ]
+    },
+    {
+      "path": "/data1/zyy/qwen2_audio_esc50",
+      "exists": true,
+      "children": [
+        ".git",
+        ".gitignore",
+        "README.md",
+        "cache",
+        "configs",
+        "data",
+        "datasets",
+        "environment_audio.yml",
+        "logs",
+        "models",
+        "outputs",
+        "results",
+        "scripts"
+      ]
+    },
+    {
+      "path": "/data1/zyy/qwen_gsm8k",
+      "exists": true,
+      "children": [
+        "README.md",
+        "cache",
+        "configs",
+        "data",
+        "environment.yml",
+        "logs",
+        "models",
+        "outputs",
+        "scripts"
+      ]
+    },
+    {
+      "path": "/home/shn/.cache/huggingface/hub",
+      "exists": true,
+      "children": [
+        ".locks",
+        "CACHEDIR.TAG",
+        "datasets--X1AOX1A--LLMasWorldModels",
+        "datasets--YWZBrandon--webshop-data",
+        "datasets--bowen-upenn--PersonaMem-v2",
+        "datasets--hiyouga--geometry3k",
+        "models--Qwen--Qwen2.5-7B-Instruct",
+        "models--Qwen--Qwen3-8B",
+        "models--Qwen--Qwen3.5-9B",
+        "models--Qwen--Qwen3.8-27B",
+        "models--osunlp--early-experience-alfworld",
+        "models--osunlp--early-experience-scienceworld",
+        "version.txt"
+      ]
+    }
+  ],
+  "model_candidates": [
+    {
+      "path": "/data1/laip/models/Qwen/Qwen3-8B",
+      "files": [
+        {
+          "name": "model-00003-of-00005.safetensors",
+          "bytes": 3959604768,
+          "symlink": false
+        },
+        {
+          "name": "model.safetensors.index.json",
+          "bytes": 32878,
+          "symlink": false
+        },
+        {
+          "name": "tokenizer_config.json",
+          "bytes": 9732,
+          "symlink": false
+        },
+        {
+          "name": ".mdl",
+          "bytes": 36,
+          "symlink": false
+        },
+        {
+          "name": "configuration.json",
+          "bytes": 73,
+          "symlink": false
+        },
+        {
+          "name": "config.json",
+          "bytes": 728,
+          "symlink": false
+        },
+        {
+          "name": "model-00001-of-00005.safetensors",
+          "bytes": 3996250744,
+          "symlink": false
+        },
+        {
+          "name": "generation_config.json",
+          "bytes": 239,
+          "symlink": false
+        },
+        {
+          "name": "merges.txt",
+          "bytes": 1671853,
+          "symlink": false
+        },
+        {
+          "name": "vocab.json",
+          "bytes": 2776833,
+          "symlink": false
+        },
+        {
+          "name": "tokenizer.json",
+          "bytes": 11422654,
+          "symlink": false
+        },
+        {
+          "name": ".msc",
+          "bytes": 1150,
+          "symlink": false
+        },
+        {
+          "name": "model-00002-of-00005.safetensors",
+          "bytes": 3993160032,
+          "symlink": false
+        },
+        {
+          "name": "LICENSE",
+          "bytes": 11343,
+          "symlink": false
+        },
+        {
+          "name": "model-00005-of-00005.safetensors",
+          "bytes": 1244659840,
+          "symlink": false
+        },
+        {
+          "name": "README.md",
+          "bytes": 16660,
+          "symlink": false
+        },
+        {
+          "name": "model-00004-of-00005.safetensors",
+          "bytes": 3187841392,
+          "symlink": false
+        },
+        {
+          "name": ".mv",
+          "bytes": 36,
+          "symlink": false
+        }
+      ]
+    },
+    {
+      "path": "/data1/laip/models/._____temp/Qwen/Qwen3-8B",
+      "files": []
+    },
+    {
+      "path": "/data1/laip/models/._____temp/lllllp1/Qwen3-8B_HuaTuo_SFT_epoch3",
+      "files": []
+    },
+    {
+      "path": "/data1/laip/models/lllllp1/Qwen3-8B_HuaTuo_SFT_epoch3",
+      "files": [
+        {
+          "name": "model.safetensors.index.json",
+          "bytes": 32878,
+          "symlink": false
+        },
+        {
+          "name": "tokenizer_config.json",
+          "bytes": 9733,
+          "symlink": false
+        },
+        {
+          "name": ".mdl",
+          "bytes": 57,
+          "symlink": false
+        },
+        {
+          "name": "rng_state_2.pth",
+          "bytes": 16389,
+          "symlink": false
+        },
+        {
+          "name": "rng_state_7.pth",
+          "bytes": 16389,
+          "symlink": false
+        },
+        {
+          "name": "model-00001-of-00004.safetensors",
+          "bytes": 4902257696,
+          "symlink": false
+        },
+        {
+          "name": "special_tokens_map.json",
+          "bytes": 613,
+          "symlink": false
+        },
+        {
+          "name": "latest",
+          "bytes": 14,
+          "symlink": false
+        },
+        {
+          "name": "trainer_state.json",
+          "bytes": 57807,
+          "symlink": false
+        },
+        {
+          "name": "config.json",
+          "bytes": 730,
+          "symlink": false
+        },
+        {
+          "name": "zero_to_fp32.py",
+          "bytes": 33272,
+          "symlink": false
+        },
+        {
+          "name": "rng_state_3.pth",
+          "bytes": 16389,
+          "symlink": false
+        },
+        {
+          "name": "rng_state_5.pth",
+          "bytes": 16389,
+          "symlink": false
+        },
+        {
+          "name": "model-00002-of-00004.safetensors",
+          "bytes": 4915960368,
+          "symlink": false
+        },
+        {
+          "name": "generation_config.json",
+          "bytes": 117,
+          "symlink": false
+        },
+        {
+          "name": "rng_state_0.pth",
+          "bytes": 16389,
+          "symlink": false
+        },
+        {
+          "name": "merges.txt",
+          "bytes": 1671853,
+          "symlink": false
+        },
+        {
+          "name": "rng_state_1.pth",
+          "bytes": 16389,
+          "symlink": false
+        },
+        {
+          "name": "model-00003-of-00004.safetensors",
+          "bytes": 4983068496,
+          "symlink": false
+        },
+        {
+          "name": "scheduler.pt",
+          "bytes": 1465,
+          "symlink": false
+        },
+        {
+          "name": "vocab.json",
+          "bytes": 2776833,
+          "symlink": false
+        },
+        {
+          "name": "added_tokens.json",
+          "bytes": 707,
+          "symlink": false
+        },
+        {
+          "name": "model-00004-of-00004.safetensors",
+          "bytes": 1580230264,
+          "symlink": false
+        },
+        {
+          "name": "tokenizer.json",
+          "bytes": 11422654,
+          "symlink": false
+        },
+        {
+          "name": ".msc",
+          "bytes": 1969,
+          "symlink": false
+        },
+        {
+          "name": "training_args.bin",
+          "bytes": 8081,
+          "symlink": false
+        },
+        {
+          "name": "rng_state_4.pth",
+          "bytes": 16389,
+          "symlink": false
+        },
+        {
+          "name": "rng_state_6.pth",
+          "bytes": 16389,
+          "symlink": false
+        },
+        {
+          "name": "README.md",
+          "bytes": 1393,
+          "symlink": false
+        },
+        {
+          "name": ".mv",
+          "bytes": 36,
+          "symlink": false
+        }
+      ]
+    },
+    {
+      "path": "/data1/xby/cache/hf_cache/hub/models--Qwen--Qwen3-8B",
+      "files": []
+    },
+    {
+      "path": "/data1/xby/cache/hf_cache/hub/models--Qwen--Qwen3-8B-FP8",
+      "files": []
+    },
+    {
+      "path": "/data1/xby/cache/hf_cache/hub/models--Qwen--Qwen2.5-7B",
+      "files": []
+    },
+    {
+      "path": "/data1/xby/cache/hf_cache/hub/models--Qwen--Qwen2.5-7B-Instruct",
+      "files": []
+    },
+    {
+      "path": "/data1/xdl/model/._____temp/Qwen/Qwen2.5-7B-Instruct",
+      "files": []
+    },
+    {
+      "path": "/data1/xxz/models/Qwen3-8B-Base",
+      "files": [
+        {
+          "name": "model-00003-of-00005.safetensors",
+          "bytes": 3959604768,
+          "symlink": false
+        },
+        {
+          "name": "model.safetensors.index.json",
+          "bytes": 32878,
+          "symlink": false
+        },
+        {
+          "name": "tokenizer_config.json",
+          "bytes": 9732,
+          "symlink": false
+        },
+        {
+          "name": "config.json",
+          "bytes": 728,
+          "symlink": false
+        },
+        {
+          "name": ".gitattributes",
+          "bytes": 1570,
+          "symlink": false
+        },
+        {
+          "name": "model-00001-of-00005.safetensors",
+          "bytes": 3996250744,
+          "symlink": false
+        },
+        {
+          "name": "generation_config.json",
+          "bytes": 239,
+          "symlink": false
+        },
+        {
+          "name": "merges.txt",
+          "bytes": 1671853,
+          "symlink": false
+        },
+        {
+          "name": "vocab.json",
+          "bytes": 2776833,
+          "symlink": false
+        },
+        {
+          "name": "tokenizer.json",
+          "bytes": 11422654,
+          "symlink": false
+        },
+        {
+          "name": "model-00002-of-00005.safetensors",
+          "bytes": 3993160032,
+          "symlink": false
+        },
+        {
+          "name": "LICENSE",
+          "bytes": 11343,
+          "symlink": false
+        },
+        {
+          "name": "model-00005-of-00005.safetensors",
+          "bytes": 1244659840,
+          "symlink": false
+        },
+        {
+          "name": "README.md",
+          "bytes": 16660,
+          "symlink": false
+        },
+        {
+          "name": "model-00004-of-00005.safetensors",
+          "bytes": 3187841392,
+          "symlink": false
+        }
+      ]
+    },
+    {
+      "path": "/data1/xxz/models/Qwen3-8B-Base/.cache",
+      "files": []
+    },
+    {
+      "path": "/data1/xxz/models/Qwen3-8B-Base/.cache/huggingface",
+      "files": [
+        {
+          "name": ".gitignore",
+          "bytes": 1,
+          "symlink": false
+        }
+      ]
+    },
+    {
+      "path": "/data1/zhe2/huggingface_model/._____temp/Qwen/Qwen2.5-7B-Instruct",
+      "files": []
+    },
+    {
+      "path": "/home/shn/.cache/huggingface/hub/models--Qwen--Qwen2.5-7B-Instruct",
+      "files": []
+    },
+    {
+      "path": "/home/shn/.cache/huggingface/hub/models--Qwen--Qwen2.5-7B-Instruct/blobs",
+      "files": [
+        {
+          "name": "20024bfe7c83998e9aeaf98a0cd6a2ce6306c2f0",
+          "bytes": 1671839,
+          "symlink": false
+        },
+        {
+          "name": "07bfe0640cb5a0037f9322287fbfc682806cf672",
+          "bytes": 7305,
+          "symlink": false
+        },
+        {
+          "name": "14d037fdda5a1311dcc0275003a7a370d84114e6",
+          "bytes": 27752,
+          "symlink": false
+        },
+        {
+          "name": "a1333e6293854747c481288ea83b348226af178dd565c49b6f9495ba1966aba7",
+          "bytes": 3945441440,
+          "symlink": false
+        },
+        {
+          "name": "1a72d403cdf0c1ec3cb7f289f17b394a01e64394c2e9b3c0f94dbce3faf879bd",
+          "bytes": 3556377672,
+          "symlink": false
+        },
+        {
+          "name": "8efdec4c1bc12317ae1a38dc42b595ce777738a64deea3fcb8a0a91381bcdfd5",
+          "bytes": 3864726424,
+          "symlink": false
+        },
+        {
+          "name": "4783fe10ac3adce15ac8f358ef5462739852c569",
+          "bytes": 2776833,
+          "symlink": false
+        },
+        {
+          "name": "0178295f88afc3c7f279ed284f961f8c1be00654",
+          "bytes": 663,
+          "symlink": false
+        },
+        {
+          "name": "0eb3c536657dcd12626e09eca4b6198c0cbcde1e",
+          "bytes": 243,
+          "symlink": false
+        },
+        {
+          "name": "f5d25a2772cb825164a2a2c0fb6d51a87e282abf21e4dd75bc5cfb3cd0ea6185",
+          "bytes": 3864726352,
+          "symlink": false
+        },
+        {
+          "name": "443909a61d429dff23010e5bddd28ff530edda00",
+          "bytes": 7031645,
+          "symlink": false
+        }
+      ]
+    },
+    {
+      "path": "/home/shn/.cache/huggingface/hub/models--Qwen--Qwen2.5-7B-Instruct/refs",
+      "files": [
+        {
+          "name": "main",
+          "bytes": 40,
+          "symlink": false
+        }
+      ]
+    },
+    {
+      "path": "/home/shn/.cache/huggingface/hub/models--Qwen--Qwen2.5-7B-Instruct/snapshots",
+      "files": []
+    },
+    {
+      "path": "/home/shn/.cache/huggingface/hub/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28",
+      "files": [
+        {
+          "name": "model-00004-of-00004.safetensors",
+          "bytes": 3556377672,
+          "symlink": true
+        },
+        {
+          "name": "model-00003-of-00004.safetensors",
+          "bytes": 3864726424,
+          "symlink": true
+        },
+        {
+          "name": "model-00002-of-00004.safetensors",
+          "bytes": 3864726352,
+          "symlink": true
+        },
+        {
+          "name": "vocab.json",
+          "bytes": 2776833,
+          "symlink": true
+        },
+        {
+          "name": "merges.txt",
+          "bytes": 1671839,
+          "symlink": true
+        },
+        {
+          "name": "model-00001-of-00004.safetensors",
+          "bytes": 3945441440,
+          "symlink": true
+        },
+        {
+          "name": "config.json",
+          "bytes": 663,
+          "symlink": true
+        },
+        {
+          "name": "model.safetensors.index.json",
+          "bytes": 27752,
+          "symlink": true
+        },
+        {
+          "name": "tokenizer_config.json",
+          "bytes": 7305,
+          "symlink": true
+        },
+        {
+          "name": "tokenizer.json",
+          "bytes": 7031645,
+          "symlink": true
+        },
+        {
+          "name": "generation_config.json",
+          "bytes": 243,
+          "symlink": true
+        }
+      ]
+    },
+    {
+      "path": "/home/shn/.cache/huggingface/hub/models--Qwen--Qwen2.5-7B-Instruct/.no_exist",
+      "files": []
+    },
+    {
+      "path": "/home/shn/.cache/huggingface/hub/models--Qwen--Qwen2.5-7B-Instruct/.no_exist/a09a35458c702b33eeacc393d103063234e8bc28",
+      "files": [
+        {
+          "name": "chat_template.jinja",
+          "bytes": 0,
+          "symlink": false
+        },
+        {
+          "name": "preprocessor_config.json",
+          "bytes": 0,
+          "symlink": false
+        },
+        {
+          "name": "added_tokens.json",
+          "bytes": 0,
+          "symlink": false
+        },
+        {
+          "name": "special_tokens_map.json",
+          "bytes": 0,
+          "symlink": false
+        }
+      ]
+    },
+    {
+      "path": "/home/shn/.cache/huggingface/hub/.locks/models--Qwen--Qwen2.5-7B-Instruct",
+      "files": [
+        {
+          "name": "1a72d403cdf0c1ec3cb7f289f17b394a01e64394c2e9b3c0f94dbce3faf879bd.lock",
+          "bytes": 0,
+          "symlink": false
+        },
+        {
+          "name": "0eb3c536657dcd12626e09eca4b6198c0cbcde1e.lock",
+          "bytes": 0,
+          "symlink": false
+        },
+        {
+          "name": "8efdec4c1bc12317ae1a38dc42b595ce777738a64deea3fcb8a0a91381bcdfd5.lock",
+          "bytes": 0,
+          "symlink": false
+        },
+        {
+          "name": "0178295f88afc3c7f279ed284f961f8c1be00654.lock",
+          "bytes": 0,
+          "symlink": false
+        },
+        {
+          "name": "a1333e6293854747c481288ea83b348226af178dd565c49b6f9495ba1966aba7.lock",
+          "bytes": 0,
+          "symlink": false
+        },
+        {
+          "name": "14d037fdda5a1311dcc0275003a7a370d84114e6.lock",
+          "bytes": 0,
+          "symlink": false
+        },
+        {
+          "name": "4783fe10ac3adce15ac8f358ef5462739852c569.lock",
+          "bytes": 0,
+          "symlink": false
+        },
+        {
+          "name": "443909a61d429dff23010e5bddd28ff530edda00.lock",
+          "bytes": 0,
+          "symlink": false
+        },
+        {
+          "name": "07bfe0640cb5a0037f9322287fbfc682806cf672.lock",
+          "bytes": 0,
+          "symlink": false
+        },
+        {
+          "name": "20024bfe7c83998e9aeaf98a0cd6a2ce6306c2f0.lock",
+          "bytes": 0,
+          "symlink": false
+        },
+        {
+          "name": "f5d25a2772cb825164a2a2c0fb6d51a87e282abf21e4dd75bc5cfb3cd0ea6185.lock",
+          "bytes": 0,
+          "symlink": false
+        }
+      ]
+    },
+    {
+      "path": "/home/shn/.cache/huggingface/hub/.locks/models--Qwen--Qwen3-8B",
+      "files": [
+        {
+          "name": "5991236cea6fe21f3d43cab0f0e84448734fbbe0789816202989f2ddc9d18282.lock",
+          "bytes": 0,
+          "symlink": false
+        },
+        {
+          "name": "20c2d6366ab85c90786ccdd829cd2b9e7d30ef3b2ebbb998280e7e4014b542ff.lock",
+          "bytes": 0,
+          "symlink": false
+        },
+        {
+          "name": "b5ee7de71fbf17db3d5704e0c8f2bc7d005ca9e1d7ca2aeb19827b0cfcaa917a.lock",
+          "bytes": 0,
+          "symlink": false
+        },
+        {
+          "name": "31d6a825ae35f11fb85b195b4c42c146c051e446433125a215336abdf95cbf5f.lock",
+          "bytes": 0,
+          "symlink": false
+        },
+        {
+          "name": "c5185c4794be2d8a9784d5753c9922db38df478ce11f9ed0b415b7304d896836.lock",
+          "bytes": 0,
+          "symlink": false
+        }
+      ]
+    },
+    {
+      "path": "/home/shn/.cache/huggingface/hub/models--Qwen--Qwen3-8B",
+      "files": []
+    },
+    {
+      "path": "/home/shn/.cache/huggingface/hub/models--Qwen--Qwen3-8B/blobs",
+      "files": [
+        {
+          "name": "5991236cea6fe21f3d43cab0f0e84448734fbbe0789816202989f2ddc9d18282.incomplete",
+          "bytes": 0,
+          "symlink": false
+        },
+        {
+          "name": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+          "bytes": 11422654,
+          "symlink": false
+        },
+        {
+          "name": "d46195ac87f837ad233d02b2f80f148bf7c005e0",
+          "bytes": 728,
+          "symlink": false
+        },
+        {
+          "name": "31d6a825ae35f11fb85b195b4c42c146c051e446433125a215336abdf95cbf5f.incomplete",
+          "bytes": 1073741824,
+          "symlink": false
+        },
+        {
+          "name": "4783fe10ac3adce15ac8f358ef5462739852c569",
+          "bytes": 2776833,
+          "symlink": false
+        },
+        {
+          "name": "20c2d6366ab85c90786ccdd829cd2b9e7d30ef3b2ebbb998280e7e4014b542ff.incomplete",
+          "bytes": 0,
+          "symlink": false
+        },
+        {
+          "name": "417d038a63fa3de29cfde265caedae14d1a58d92",
+          "bytes": 9732,
+          "symlink": false
+        },
+        {
+          "name": "2b85c00f1b118961cd7a477e2bba0fe197a4ce1a",
+          "bytes": 32878,
+          "symlink": false
+        },
+        {
+          "name": "31349551d90c7606f325fe0f11bbb8bd5fa0d7c7",
+          "bytes": 1671853,
+          "symlink": false
+        },
+        {
+          "name": "c5185c4794be2d8a9784d5753c9922db38df478ce11f9ed0b415b7304d896836.incomplete",
+          "bytes": 0,
+          "symlink": false
+        },
+        {
+          "name": "b5ee7de71fbf17db3d5704e0c8f2bc7d005ca9e1d7ca2aeb19827b0cfcaa917a.incomplete",
+          "bytes": 0,
+          "symlink": false
+        }
+      ]
+    },
+    {
+      "path": "/home/shn/.cache/huggingface/hub/models--Qwen--Qwen3-8B/refs",
+      "files": [
+        {
+          "name": "main",
+          "bytes": 40,
+          "symlink": false
+        }
+      ]
+    },
+    {
+      "path": "/home/shn/.cache/huggingface/hub/models--Qwen--Qwen3-8B/snapshots",
+      "files": []
+    },
+    {
+      "path": "/home/shn/.cache/huggingface/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218",
+      "files": [
+        {
+          "name": "vocab.json",
+          "bytes": 2776833,
+          "symlink": true
+        },
+        {
+          "name": "merges.txt",
+          "bytes": 1671853,
+          "symlink": true
+        },
+        {
+          "name": "config.json",
+          "bytes": 728,
+          "symlink": true
+        },
+        {
+          "name": "model.safetensors.index.json",
+          "bytes": 32878,
+          "symlink": true
+        },
+        {
+          "name": "tokenizer_config.json",
+          "bytes": 9732,
+          "symlink": true
+        },
+        {
+          "name": "tokenizer.json",
+          "bytes": 11422654,
+          "symlink": true
+        }
+      ]
+    },
+    {
+      "path": "/home/shn/.cache/huggingface/hub/models--Qwen--Qwen3-8B/.no_exist",
+      "files": []
+    },
+    {
+      "path": "/home/shn/.cache/huggingface/hub/models--Qwen--Qwen3-8B/.no_exist/b968826d9c46dd6066d109eabc6255188de91218",
+      "files": [
+        {
+          "name": "chat_template.jinja",
+          "bytes": 0,
+          "symlink": false
+        },
+        {
+          "name": "preprocessor_config.json",
+          "bytes": 0,
+          "symlink": false
+        },
+        {
+          "name": "added_tokens.json",
+          "bytes": 0,
+          "symlink": false
+        },
+        {
+          "name": "model.safetensors",
+          "bytes": 0,
+          "symlink": false
+        },
+        {
+          "name": "special_tokens_map.json",
+          "bytes": 0,
+          "symlink": false
+        }
+      ]
+    }
+  ],
+  "python_environments": [
+    {
+      "path": "/home/shn/miniconda3",
+      "python": "Python 3.13.9",
+      "packages": {
+        "appworld": [],
+        "vllm": [],
+        "torch": [],
+        "transformers": [],
+        "huggingface_hub": [
+          "huggingface_hub-1.6.0.dist-info"
+        ]
+      }
+    },
+    {
+      "path": "/home/shn/miniconda3/envs/alfworld",
+      "python": "Python 3.9.25",
+      "packages": {
+        "appworld": [],
+        "vllm": [
+          "vllm-0.11.0.dist-info"
+        ],
+        "torch": [
+          "torch-2.8.0+cu128.dist-info"
+        ],
+        "transformers": [
+          "transformers-4.57.6.dist-info"
+        ],
+        "huggingface_hub": [
+          "huggingface_hub-0.36.2.dist-info"
+        ]
+      }
+    },
+    {
+      "path": "/home/shn/miniconda3/envs/alfworld_env",
+      "python": "Python 3.9.25",
+      "packages": {
+        "appworld": [],
+        "vllm": [],
+        "torch": [
+          "torch-2.8.0.dist-info"
+        ],
+        "transformers": [
+          "transformers-4.57.6.dist-info"
+        ],
+        "huggingface_hub": [
+          "huggingface_hub-0.36.2.dist-info"
+        ]
+      }
+    },
+    {
+      "path": "/home/shn/miniconda3/envs/cogs118a",
+      "python": "Python 3.13.7",
+      "packages": {
+        "appworld": [],
+        "vllm": [],
+        "torch": [],
+        "transformers": [],
+        "huggingface_hub": []
+      }
+    },
+    {
+      "path": "/home/shn/miniconda3/envs/ee-alfworld",
+      "python": "Python 3.12.14",
+      "packages": {
+        "appworld": [],
+        "vllm": [],
+        "torch": [
+          "torch-2.6.0+cpu.dist-info"
+        ],
+        "transformers": [],
+        "huggingface_hub": []
+      }
+    },
+    {
+      "path": "/home/shn/miniconda3/envs/ee-qwen38",
+      "python": "Python 3.12.0",
+      "packages": {
+        "appworld": [],
+        "vllm": [
+          "vllm-0.30.0.dist-info"
+        ],
+        "torch": [
+          "torch-2.13.0.dist-info"
+        ],
+        "transformers": [
+          "transformers-5.17.0.dist-info"
+        ],
+        "huggingface_hub": [
+          "huggingface_hub-1.33.0.dist-info"
+        ]
+      }
+    },
+    {
+      "path": "/home/shn/miniconda3/envs/ee-qwen38-direct",
+      "python": "Python 3.12.0",
+      "packages": {
+        "appworld": [],
+        "vllm": [
+          "vllm-0.11.0.dist-info"
+        ],
+        "torch": [
+          "torch-2.8.0.dist-info"
+        ],
+        "transformers": [
+          "transformers-5.17.0.dist-info"
+        ],
+        "huggingface_hub": [
+          "huggingface_hub-1.33.0.dist-info"
+        ]
+      }
+    },
+    {
+      "path": "/home/shn/miniconda3/envs/ee-scienceworld",
+      "python": "Python 3.8.20",
+      "packages": {
+        "appworld": [],
+        "vllm": [],
+        "torch": [],
+        "transformers": [],
+        "huggingface_hub": []
+      }
+    },
+    {
+      "path": "/home/shn/miniconda3/envs/ee-webshop",
+      "python": "Python 3.10.21",
+      "packages": {
+        "appworld": [],
+        "vllm": [],
+        "torch": [
+          "torch-2.6.0.dist-info"
+        ],
+        "transformers": [
+          "transformers-4.51.1.dist-info"
+        ],
+        "huggingface_hub": [
+          "huggingface_hub-0.36.2.dist-info"
+        ]
+      }
+    },
+    {
+      "path": "/home/shn/miniconda3/envs/rlvmr-sciworld",
+      "python": "Python 3.10.20",
+      "packages": {
+        "appworld": [],
+        "vllm": [
+          "vllm-0.8.2.dist-info"
+        ],
+        "torch": [
+          "torch-2.6.0.dist-info"
+        ],
+        "transformers": [
+          "transformers-4.51.3.dist-info"
+        ],
+        "huggingface_hub": [
+          "huggingface_hub-0.36.2.dist-info"
+        ]
+      }
+    },
+    {
+      "path": "/home/shn/miniconda3/envs/scienceworld",
+      "python": "Python 3.8.20",
+      "packages": {
+        "appworld": [],
+        "vllm": [],
+        "torch": [],
+        "transformers": [],
+        "huggingface_hub": []
+      }
+    },
+    {
+      "path": "/home/shn/miniconda3/envs/sciworld",
+      "python": "Python 3.8.20",
+      "packages": {
+        "appworld": [],
+        "vllm": [],
+        "torch": [],
+        "transformers": [],
+        "huggingface_hub": []
+      }
+    },
+    {
+      "path": "/home/shn/miniconda3/envs/stateact",
+      "python": "Python 3.14.3",
+      "packages": {
+        "appworld": [],
+        "vllm": [],
+        "torch": [
+          "torch-2.11.0+cu128.dist-info"
+        ],
+        "transformers": [],
+        "huggingface_hub": []
+      }
+    },
+    {
+      "path": "/home/shn/miniconda3/envs/tales",
+      "python": "Python 3.12.13",
+      "packages": {
+        "appworld": [],
+        "vllm": [],
+        "torch": [],
+        "transformers": [
+          "transformers-5.15.0.dist-info"
+        ],
+        "huggingface_hub": [
+          "huggingface_hub-1.27.0.dist-info"
+        ]
+      }
+    },
+    {
+      "path": "/home/shn/miniconda3/envs/textcraft",
+      "python": "Python 3.10.20",
+      "packages": {
+        "appworld": [],
+        "vllm": [],
+        "torch": [],
+        "transformers": [],
+        "huggingface_hub": []
+      }
+    },
+    {
+      "path": "/home/shn/miniconda3/envs/verl-agent",
+      "python": "Python 3.12.0",
+      "packages": {
+        "appworld": [],
+        "vllm": [
+          "vllm-0.11.0.dist-info"
+        ],
+        "torch": [
+          "torch-2.8.0.dist-info"
+        ],
+        "transformers": [
+          "transformers-4.57.3.dist-info"
+        ],
+        "huggingface_hub": [
+          "huggingface_hub-0.36.2.dist-info"
+        ]
+      }
+    },
+    {
+      "path": "/home/shn/miniconda3/envs/verl-agent-webshop",
+      "python": "Python 3.10.20",
+      "packages": {
+        "appworld": [],
+        "vllm": [
+          "vllm-0.8.2.dist-info"
+        ],
+        "torch": [
+          "torch-2.6.0.dist-info"
+        ],
+        "transformers": [
+          "transformers-4.51.1.dist-info"
+        ],
+        "huggingface_hub": [
+          "huggingface_hub-0.36.2.dist-info"
+        ]
+      }
+    },
+    {
+      "path": "/home/shn/miniconda3/envs/vllm",
+      "python": "Python 3.10.19",
+      "packages": {
+        "appworld": [],
+        "vllm": [
+          "vllm-0.6.6.post1.dist-info"
+        ],
+        "torch": [
+          "torch-2.5.1.dist-info"
+        ],
+        "transformers": [
+          "transformers-4.57.3.dist-info"
+        ],
+        "huggingface_hub": [
+          "huggingface_hub-0.36.0.dist-info"
+        ]
+      }
+    },
+    {
+      "path": "/home/shn/miniconda3/envs/vllm-cu128",
+      "python": "Python 3.12.13",
+      "packages": {
+        "appworld": [],
+        "vllm": [
+          "vllm-0.24.0.dist-info"
+        ],
+        "torch": [
+          "torch-2.11.0+cu128.dist-info"
+        ],
+        "transformers": [
+          "transformers-5.13.0.dist-info"
+        ],
+        "huggingface_hub": [
+          "huggingface_hub-1.22.0.dist-info"
+        ]
+      }
+    },
+    {
+      "path": "/home/shn/miniconda3/envs/vllm-qwen3",
+      "python": "Python 3.12.13",
+      "packages": {
+        "appworld": [],
+        "vllm": [],
+        "torch": [],
+        "transformers": [],
+        "huggingface_hub": []
+      }
+    },
+    {
+      "path": "/home/shn/miniconda3/envs/webshop",
+      "python": "Python 3.8.13",
+      "packages": {
+        "appworld": [],
+        "vllm": [],
+        "torch": [
+          "torch-1.11.0.dist-info"
+        ],
+        "transformers": [
+          "transformers-4.19.2.dist-info"
+        ],
+        "huggingface_hub": [
+          "huggingface_hub-0.36.2.dist-info"
+        ]
+      }
+    },
+    {
+      "path": "/data1/shn/anaconda3",
+      "python": "Python 3.12.4",
+      "packages": {
+        "appworld": [],
+        "vllm": [],
+        "torch": [],
+        "transformers": [],
+        "huggingface_hub": []
+      }
+    },
+    {
+      "path": "/data1/shn/anaconda3/envs/torch128",
+      "python": "Python 3.13.5",
+      "packages": {
+        "appworld": [],
+        "vllm": [],
+        "torch": [
+          "torch-2.8.0.dist-info"
+        ],
+        "transformers": [],
+        "huggingface_hub": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "model_id": "Qwen/Qwen2.5-7B-Instruct",
+  "sha": "a09a35458c702b33eeacc393d103063234e8bc28",
+  "safetensors": {
+    "parameters": {
+      "BF16": 7615616512
+    },
+    "total": 7615616512
+  },
+  "siblings": [
+    {
+      "rfilename": ".gitattributes",
+      "size": 1519
+    },
+    {
+      "rfilename": "LICENSE",
+      "size": 11343
+    },
+    {
+      "rfilename": "README.md",
+      "size": 6240
+    },
+    {
+      "rfilename": "config.json",
+      "size": 663
+    },
+    {
+      "rfilename": "generation_config.json",
+      "size": 243
+    },
+    {
+      "rfilename": "merges.txt",
+      "size": 1671839
+    },
+    {
+      "rfilename": "model-00001-of-00004.safetensors",
+      "size": 3945441440
+    },
+    {
+      "rfilename": "model-00002-of-00004.safetensors",
+      "size": 3864726352
+    },
+    {
+      "rfilename": "model-00003-of-00004.safetensors",
+      "size": 3864726424
+    },
+    {
+      "rfilename": "model-00004-of-00004.safetensors",
+      "size": 3556377672
+    },
+    {
+      "rfilename": "model.safetensors.index.json",
+      "size": 27752
+    },
+    {
+      "rfilename": "tokenizer.json",
+      "size": 7031645
+    },
+    {
+      "rfilename": "tokenizer_config.json",
+      "size": 7305
+    },
+    {
+      "rfilename": "vocab.json",
+      "size": 2776833
+    }
+  ]
+}

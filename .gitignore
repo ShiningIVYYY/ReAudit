@@ -1,0 +1,53 @@
+# Credentials
+.env
+.env.*
+!.env.example
+*credentials*
+*secret*
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+.netrc
+.git-credentials
+# Environments, bytecode, caches, weights
+.venv/
+venv/
+env/
+envs/
+conda/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+huggingface/
+models/
+weights/
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.gguf
+*.onnx
+# Runtime, downloaded datasets and temporary files
+tmp/
+runtime/
+appworld_data/
+data/raw/
+data/downloads/
+data/datasets/
+data/tasks/
+data/apps/
+# Keep only small run summaries
+runs/*
+!runs/runs.csv
+!runs/.gitkeep
+**/traces/
+*.log
+*.log.*
+.DS_Store

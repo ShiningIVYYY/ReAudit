@@ -1,0 +1,107 @@
+{
+  "timestamp_utc": "2026-10-31T21:36:26.500718+00:00",
+  "records": [
+    {
+      "command": [
+        "date",
+        "-u",
+        "-Iseconds"
+      ],
+      "returncode": 0,
+      "output": "2026-10-31T21:36:24+00:00\n"
+    },
+    {
+      "command": [
+        "nvidia-smi"
+      ],
+      "returncode": 0,
+      "output": "Sun Nov  1 05:36:24 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 570.172.08             Driver Version: 570.172.08     CUDA Version: 12.8     |\n|-----------------------------------------+------------------------+----------------------+\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA GeForce RTX 4090        Off |   00000000:01:00.0 Off |                  Off |\n| 31%   30C    P8              8W /  450W |   18141MiB /  24564MiB |      0%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n|   1  NVIDIA GeForce RTX 4090        Off |   00000000:24:00.0 Off |                  Off |\n| 31%   30C    P8             18W /  450W |       3MiB /  24564MiB |      0%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n|   2  NVIDIA GeForce RTX 4090        Off |   00000000:41:00.0 Off |                  Off |\n| 31%   31C    P8             14W /  450W |       3MiB /  24564MiB |      0%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n|   3  NVIDIA GeForce RTX 4090        Off |   00000000:61:00.0 Off |                  Off |\n| 31%   30C    P8             14W /  450W |       3MiB /  24564MiB |      0%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n|   4  NVIDIA GeForce RTX 4090        Off |   00000000:81:00.0 Off |                  Off |\n| 31%   30C    P8             15W /  450W |       3MiB /  24564MiB |      0%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n|   5  NVIDIA GeForce RTX 4090        Off |   00000000:A1:00.0 Off |                  Off |\n| 31%   31C    P8             14W /  450W |       3MiB /  24564MiB |      0%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n|   6  NVIDIA GeForce RTX 4090        Off |   00000000:C1:00.0 Off |                  Off |\n| 31%   31C    P8             14W /  450W |       3MiB /  24564MiB |      0%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n|   7  NVIDIA GeForce RTX 4090        Off |   00000000:E1:00.0 Off |                  Off |\n| 31%   31C    P8             15W /  450W |       3MiB /  24564MiB |      0%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n                                                                                         \n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|    0   N/A  N/A         1169430      C   ...envs/llm_train/bin/python3.11      18118MiB |\n+-----------------------------------------------------------------------------------------+\n"
+    },
+    {
+      "command": [
+        "nvidia-smi",
+        "--query-gpu=index,uuid,name,memory.total,memory.used,memory.free,utilization.gpu,driver_version",
+        "--format=csv"
+      ],
+      "returncode": 0,
+      "output": "index, uuid, name, memory.total [MiB], memory.used [MiB], memory.free [MiB], utilization.gpu [%], driver_version\n0, GPU-3dfef146-b745-8612-f47e-b80026b13796, NVIDIA GeForce RTX 4090, 24564 MiB, 18141 MiB, 5952 MiB, 0 %, 570.172.08\n1, GPU-6b9f57a2-3ab5-8b7a-69b9-7311af633997, NVIDIA GeForce RTX 4090, 24564 MiB, 3 MiB, 24089 MiB, 0 %, 570.172.08\n2, GPU-701b290b-6a46-9933-30dd-7a6c97e78e18, NVIDIA GeForce RTX 4090, 24564 MiB, 3 MiB, 24089 MiB, 0 %, 570.172.08\n3, GPU-39ebdf55-76d2-8605-7962-f32907064c33, NVIDIA GeForce RTX 4090, 24564 MiB, 3 MiB, 24089 MiB, 0 %, 570.172.08\n4, GPU-c915a346-0c7b-abd2-a9c6-42300fa44d7e, NVIDIA GeForce RTX 4090, 24564 MiB, 3 MiB, 24089 MiB, 0 %, 570.172.08\n5, GPU-1bbf10f9-76db-811b-a7ca-b5d3e706f579, NVIDIA GeForce RTX 4090, 24564 MiB, 3 MiB, 24089 MiB, 0 %, 570.172.08\n6, GPU-c7ecfb2c-cdc3-5791-0f7d-91227b095283, NVIDIA GeForce RTX 4090, 24564 MiB, 3 MiB, 24089 MiB, 0 %, 570.172.08\n7, GPU-3f53fb52-ef85-176b-8607-e21dc9d9d4b2, NVIDIA GeForce RTX 4090, 24564 MiB, 3 MiB, 24089 MiB, 0 %, 570.172.08\n"
+    },
+    {
+      "command": [
+        "nvidia-smi",
+        "--query-compute-apps=gpu_uuid,pid,process_name,used_gpu_memory",
+        "--format=csv"
+      ],
+      "returncode": 0,
+      "output": "gpu_uuid, pid, process_name, used_gpu_memory [MiB]\nGPU-3dfef146-b745-8612-f47e-b80026b13796, 1169430, /data/zsc/miniconda3/envs/llm_train/bin/python3.11, 18118 MiB\n"
+    },
+    {
+      "command": [
+        "ps",
+        "-p",
+        "1169430",
+        "-o",
+        "user:20,pid,ppid,comm"
+      ],
+      "returncode": 0,
+      "output": "USER                     PID    PPID COMMAND\nzsc                  1169430 1169106 pt_main_thread\n"
+    },
+    {
+      "command": [
+        "lscpu"
+      ],
+      "returncode": 0,
+      "output": "架构：                                x86_64\nCPU 运行模式：                        32-bit, 64-bit\n字节序：                              Little Endian\nAddress sizes:                        43 bits physical, 48 bits virtual\nCPU:                                  128\n在线 CPU 列表：                       0-127\n每个核的线程数：                      2\n每个座的核数：                        32\n座：                                  2\nNUMA 节点：                           2\n厂商 ID：                             AuthenticAMD\nCPU 系列：                            23\n型号：                                49\n型号名称：                            AMD EPYC 7542 32-Core Processor\n步进：                                0\nFrequency boost:                      enabled\nCPU MHz：                             1500.000\nCPU 最大 MHz：                        2900.0000\nCPU 最小 MHz：                        1500.0000\nBogoMIPS：                            5788.94\n虚拟化：                              AMD-V\nL1d 缓存：                            2 MiB\nL1i 缓存：                            2 MiB\nL2 缓存：                             32 MiB\nL3 缓存：                             256 MiB\nNUMA 节点0 CPU：                      0-31,64-95\nNUMA 节点1 CPU：                      32-63,96-127\nVulnerability Gather data sampling:   Not affected\nVulnerability Itlb multihit:          Not affected\nVulnerability L1tf:                   Not affected\nVulnerability Mds:                    Not affected\nVulnerability Meltdown:               Not affected\nVulnerability Mmio stale data:        Not affected\nVulnerability Reg file data sampling: Not affected\nVulnerability Retbleed:               Mitigation; untrained return thunk; SMT enabled with STIBP protection\nVulnerability Spec rstack overflow:   Mitigation; safe RET\nVulnerability Spec store bypass:      Mitigation; Speculative Store Bypass disabled via prctl and seccomp\nVulnerability Spectre v1:             Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:             Mitigation; Retpolines; IBPB conditional; STIBP always-on; RSB filling; PBRSB-eIBRS Not affected; BHI Not affected\nVulnerability Srbds:                  Not affected\nVulnerability Tsx async abort:        Not affected\n标记：                                fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba ibrs ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local clzero irperf xsaveerptr rdpru wbnoinvd arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif v_spec_ctrl umip rdpid overflow_recov succor smca sme sev sev_es\n"
+    },
+    {
+      "command": [
+        "free",
+        "-b"
+      ],
+      "returncode": 0,
+      "output": "              总计         已用        空闲      共享    缓冲/缓存    可用\n内存： 270278987776 21939535872 19516342272  7631511552 228823109632 238787604480\n交换： 61440258048 23586623488 37853634560\n"
+    },
+    {
+      "command": [
+        "df",
+        "-B1",
+        "/data1"
+      ],
+      "returncode": 0,
+      "output": "文件系统               1B-块          已用          可用 已用% 挂载点\n/dev/nvme1n1p1 7559760302080 5800531161088 1375137361920   81% /data1\n"
+    },
+    {
+      "command": [
+        "nvcc",
+        "--version"
+      ],
+      "returncode": 0,
+      "output": "nvcc: NVIDIA (R) Cuda compiler driver\nCopyright (c) 2005-2019 NVIDIA Corporation\nBuilt on Sun_Jul_28_19:07:16_PDT_2019\nCuda compilation tools, release 10.1, V10.1.243\n"
+    },
+    {
+      "command": [
+        "git",
+        "--version"
+      ],
+      "returncode": 0,
+      "output": "git version 2.25.1\n"
+    },
+    {
+      "command": [
+        "python3",
+        "--version"
+      ],
+      "returncode": 0,
+      "output": "Python 3.8.10\n"
+    },
+    {
+      "command": [
+        "git",
+        "ls-remote",
+        "https://github.com/ShiningIVYYY/ReAudit.git"
+      ],
+      "returncode": 0,
+      "output": ""
+    }
+  ]
+}

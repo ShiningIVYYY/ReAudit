@@ -1,0 +1,2 @@
+# Checkpoint 0 only: no runtime dependencies installed.
+# Exact tested pins will be written after approval of environment setup.

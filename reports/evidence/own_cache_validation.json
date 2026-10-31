@@ -1,0 +1,83 @@
+[
+  {
+    "model_id": "Qwen/Qwen2.5-7B-Instruct",
+    "commit": "a09a35458c702b33eeacc393d103063234e8bc28",
+    "snapshot": "/home/shn/.cache/huggingface/hub/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28",
+    "complete_weight_files": true,
+    "files": [
+      {
+        "name": "model-00001-of-00004.safetensors",
+        "exists": true,
+        "expected_bytes": 3945441440,
+        "actual_bytes": 3945441440,
+        "size_matches": true
+      },
+      {
+        "name": "model-00002-of-00004.safetensors",
+        "exists": true,
+        "expected_bytes": 3864726352,
+        "actual_bytes": 3864726352,
+        "size_matches": true
+      },
+      {
+        "name": "model-00003-of-00004.safetensors",
+        "exists": true,
+        "expected_bytes": 3864726424,
+        "actual_bytes": 3864726424,
+        "size_matches": true
+      },
+      {
+        "name": "model-00004-of-00004.safetensors",
+        "exists": true,
+        "expected_bytes": 3556377672,
+        "actual_bytes": 3556377672,
+        "size_matches": true
+      }
+    ],
+    "cryptographic_integrity_verified": false
+  },
+  {
+    "model_id": "Qwen/Qwen3-8B",
+    "commit": "b968826d9c46dd6066d109eabc6255188de91218",
+    "snapshot": "/home/shn/.cache/huggingface/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218",
+    "complete_weight_files": false,
+    "files": [
+      {
+        "name": "model-00001-of-00005.safetensors",
+        "exists": false,
+        "expected_bytes": 3996250744,
+        "actual_bytes": null,
+        "size_matches": false
+      },
+      {
+        "name": "model-00002-of-00005.safetensors",
+        "exists": false,
+        "expected_bytes": 3993160032,
+        "actual_bytes": null,
+        "size_matches": false
+      },
+      {
+        "name": "model-00003-of-00005.safetensors",
+        "exists": false,
+        "expected_bytes": 3959604768,
+        "actual_bytes": null,
+        "size_matches": false
+      },
+      {
+        "name": "model-00004-of-00005.safetensors",
+        "exists": false,
+        "expected_bytes": 3187841392,
+        "actual_bytes": null,
+        "size_matches": false
+      },
+      {
+        "name": "model-00005-of-00005.safetensors",
+        "exists": false,
+        "expected_bytes": 1244659840,
+        "actual_bytes": null,
+        "size_matches": false
+      }
+    ],
+    "cryptographic_integrity_verified": false
+  }
+]

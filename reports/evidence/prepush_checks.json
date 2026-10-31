@@ -1,0 +1,31 @@
+{
+  "timestamp_utc": "2026-10-31T21:42:13.058944+00:00",
+  "scanned": "staged Git blobs; contents not printed",
+  "file_count": 29,
+  "total_bytes": 197432,
+  "largest_files": [
+    {
+      "path": "reports/evidence/Qwen3.5-27B.README.md",
+      "bytes": 92417
+    },
+    {
+      "path": "reports/evidence/cache_and_environments.json",
+      "bytes": 34509
+    },
+    {
+      "path": "reports/evidence/Qwen3-8B.README.md",
+      "bytes": 16660
+    },
+    {
+      "path": "reports/evidence/hardware_probe.json",
+      "bytes": 11475
+    },
+    {
+      "path": "reports/hardware.md",
+      "bytes": 6805
+    }
+  ],
+  "findings": [],
+  "scope": "Known credential patterns, private keys, URL userinfo, binary weights, traces and file sizes; human-readable staged diff/stat reviewed separately.",
+  "status": "pass"
+}

@@ -1,0 +1,25 @@
+{
+  "user.name": {
+    "configured": true,
+    "value_recorded": false
+  },
+  "user.email": {
+    "configured": true,
+    "value_recorded": false
+  },
+  "credential.helper": {
+    "configured": false,
+    "value_recorded": false
+  },
+  "core.sshCommand": {
+    "configured": false,
+    "value_recorded": false
+  },
+  "url_rewrite_configured": false,
+  "ssh_public_key_present": true,
+  "credential_files_present": {
+    ".git-credentials": false,
+    ".netrc": false
+  },
+  "notes": "Presence only. No key, token, credential value or private key read. HTTPS read succeeded; push authorization unverified."
+}

@@ -1,0 +1,66 @@
+[
+  {
+    "url": "https://huggingface.co/api/models/Qwen/Qwen2.5-7B-Instruct?blobs=true",
+    "commit": "a09a35458c702b33eeacc393d103063234e8bc28",
+    "retrieved_at_utc": "2026-10-31T21:36:28.067884+00:00"
+  },
+  {
+    "url": "https://huggingface.co/Qwen/Qwen2.5-7B-Instruct/resolve/a09a35458c702b33eeacc393d103063234e8bc28/README.md",
+    "sha256": "f366f33bbf6bcadbb7d87f0a21a7b65584a56b8d58b0743c77c88bee625b93a6",
+    "bytes": 6240
+  },
+  {
+    "url": "https://huggingface.co/Qwen/Qwen2.5-7B-Instruct/resolve/a09a35458c702b33eeacc393d103063234e8bc28/config.json",
+    "sha256": "7463bb0ea78315365e6c6b74de4e73bbcc8359dfb0c5a737584e077d42c0b03c",
+    "bytes": 663
+  },
+  {
+    "url": "https://huggingface.co/Qwen/Qwen2.5-7B-Instruct/resolve/a09a35458c702b33eeacc393d103063234e8bc28/generation_config.json",
+    "sha256": "3a8f9087e486054c8a4a08dae2e5a3ba62e23da212b5b8c08bc42cb983c3459f",
+    "bytes": 243
+  },
+  {
+    "url": "https://huggingface.co/api/models/Qwen/Qwen3-8B?blobs=true",
+    "commit": "b968826d9c46dd6066d109eabc6255188de91218",
+    "retrieved_at_utc": "2026-10-31T21:36:34.883592+00:00"
+  },
+  {
+    "url": "https://huggingface.co/Qwen/Qwen3-8B/resolve/b968826d9c46dd6066d109eabc6255188de91218/README.md",
+    "sha256": "0f36caaff9c2516411a7738db384606263ba653c1e63e61d72f511606164d5a6",
+    "bytes": 16660
+  },
+  {
+    "url": "https://huggingface.co/Qwen/Qwen3-8B/resolve/b968826d9c46dd6066d109eabc6255188de91218/config.json",
+    "sha256": "f7c4eadfbbf522470667b797a3c89be2524832d2d599797248dc304fff447c30",
+    "bytes": 728
+  },
+  {
+    "url": "https://huggingface.co/Qwen/Qwen3-8B/resolve/b968826d9c46dd6066d109eabc6255188de91218/generation_config.json",
+    "sha256": "2325da0f15bb848e018c5ae071b7943332e9f871d6b60e2ed22ca97d4cb993d2",
+    "bytes": 239
+  },
+  {
+    "url": "https://huggingface.co/api/models/Qwen/Qwen3.5-27B?blobs=true",
+    "commit": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+    "retrieved_at_utc": "2026-10-31T21:36:39.774086+00:00"
+  },
+  {
+    "url": "https://huggingface.co/Qwen/Qwen3.5-27B/resolve/fc05daec18b0a78c049392ed2e771dde82bdf654/README.md",
+    "sha256": "8c6303cd5e89dc378d11fb4b70a0ff9c3cccb55a031133c69d9cbde9481f1a8c",
+    "bytes": 92417
+  },
+  {
+    "url": "https://huggingface.co/Qwen/Qwen3.5-27B/resolve/fc05daec18b0a78c049392ed2e771dde82bdf654/config.json",
+    "sha256": "f8d190c5b89c1521220f935d2567a587d6e291ed69066a45a106560b05a2174c",
+    "bytes": 4134
+  },
+  {
+    "url": "https://huggingface.co/Qwen/Qwen3.5-27B/resolve/fc05daec18b0a78c049392ed2e771dde82bdf654/generation_config.json",
+    "sha256": "303aba891d66ab63908a7b3cc9163bcb835fdf8b9f6301c73216f3f1eb3992dd",
+    "bytes": 244
+  },
+  {
+    "url": "https://api.github.com/repos/stonybrooknlp/appworld/commits/main",
+    "error": "<urlopen error EOF occurred in violation of protocol (_ssl.c:1145)>"
+  }
+]
