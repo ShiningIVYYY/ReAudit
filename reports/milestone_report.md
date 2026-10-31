@@ -15,7 +15,7 @@
 - 3 个指定模型的准确仓库名、HF commit、权重大小、上下文和可核实参数见 model_verification.md。
 - GPU 0 属于他人任务，未操作；本项目本轮没有启动 GPU 进程。
 - Git main 已初始化；origin 指向指定 HTTPS URL。git ls-remote 返回码为 0、无任何 ref，远程在检查时为空，无需合并。
-- 认证检查仅保存配置存在性：已有 SSH key 文件，HTTPS credential helper 未配置；未读取任何凭据内容。实际推送因 HTTPS 认证失败，详见下文。
+- 认证检查仅保存配置存在性：已有 SSH key 文件，HTTPS credential helper 未配置；未读取任何凭据内容。首次 HTTPS 推送认证失败；后续确认既有 SSH key 可用，见恢复记录。
 
 ## 执行数量和验收
 
@@ -56,8 +56,16 @@
 
     fatal: could not read Username for 'https://github.com': terminal prompts disabled
 
-证据：[git_push_attempt.json](evidence/git_push_attempt.json)。远程仍未发布本地提交。HTTPS 未配置可用认证，需要用户在服务器处理；不要求粘贴 token，不更换 URL、不修改 SSH 配置、不尝试替代认证。
+证据：[git_push_attempt.json](evidence/git_push_attempt.json)。首次推送未发布本地提交；最新状态见下文恢复记录。HTTPS 未配置可用认证，需要用户在服务器处理；不要求粘贴 token，不更换 URL、不修改 SSH 配置、不尝试替代认证。
 
 提交前已运行 git status 与 git diff --cached --stat；检查已暂存文本凭据模式、私钥、权重扩展名及 >50 MiB 文件，未发现问题，仓库约 200 KB，最大单文件约 92 KB。见 prepush_checks.json。忽略规则已验证覆盖 .env、credentials、权重、环境缓存、轨迹、tmp 与字节码。原始官方模型卡保留字节和 SHA256，包含上游行末空格；本项目自写文件通过 whitespace 检查。
 
 本轮没有实现运行代码，未运行实验或代码单元测试。JSON 证据解析、官方原文 SHA256 和忽略规则属于文档/仓库检查，不替代阶段 1 实验验收。到此停止等待用户处理认证并确认下一阶段。
+
+## 既有 SSH 认证核实与推送恢复
+
+用户指出已配置认证后，实测默认 SSH 与显式 id_ed25519 都成功认证为 ShiningIVYYY。之前的 HTTPS 失败只表明 HTTPS 未获得凭据，不能推出 SSH 未配置。初次诊断未先测试 SSH，现已纠正，无需用户重新添加 key。
+
+只对本仓库设置 remote.origin.pushurl=git@github.com:ShiningIVYYY/ReAudit.git，保留 origin 的 HTTPS fetch URL。不改 SSH 配置、不读私钥内容、不新增 token。测试启用 StrictHostKeyChecking=yes 和 UpdateHostKeys=no，未写 known_hosts。证据：[github_ssh_auth.json](evidence/github_ssh_auth.json)。
+
+推送前再次检查远程，仍为空；准备执行原定 git push -u origin main。实际推送结果待本次操作返回后记录。下一阶段仍需用户确认。

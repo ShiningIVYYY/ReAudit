@@ -48,3 +48,7 @@ max_model_len、temperature、seed、步数、超时、模型 revision、精度�
 
 密钥仅从环境变量读取，不进入 prompt、日志或 git。
 禁止接触 test-normal/test-challenge 任务，禁止改评分或为模型放宽解析。
+
+## Git 传输
+
+origin 的读取地址保持 https://github.com/ShiningIVYYY/ReAudit.git；本仓库单独设置 SSH 推送地址 git@github.com:ShiningIVYYY/ReAudit.git，复用服务器已有、已认证为 ShiningIVYYY 的 SSH key。未修改全局 Git 或 SSH 配置。

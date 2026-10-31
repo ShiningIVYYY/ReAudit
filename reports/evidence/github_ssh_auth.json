@@ -1,0 +1,28 @@
+{
+  "command": [
+    "ssh",
+    "-T",
+    "-i",
+    "/home/shn/.ssh/id_ed25519",
+    "-o",
+    "IdentitiesOnly=yes",
+    "-o",
+    "BatchMode=yes",
+    "-o",
+    "StrictHostKeyChecking=yes",
+    "-o",
+    "UpdateHostKeys=no",
+    "-o",
+    "ConnectTimeout=12",
+    "git@github.com"
+  ],
+  "returncode": 1,
+  "output": "Hi ShiningIVYYY! You've successfully authenticated, but GitHub does not provide shell access.\n",
+  "timestamp_utc": "2026-10-31T21:53:00.748782+00:00",
+  "configuration_change": {
+    "scope": "repository-local remote.origin.pushurl",
+    "fetch_url": "https://github.com/ShiningIVYYY/ReAudit.git",
+    "push_url": "git@github.com:ShiningIVYYY/ReAudit.git",
+    "ssh_config_modified": false
+  }
+}
