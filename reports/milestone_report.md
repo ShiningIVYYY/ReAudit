@@ -15,7 +15,7 @@
 - 3 个指定模型的准确仓库名、HF commit、权重大小、上下文和可核实参数见 model_verification.md。
 - GPU 0 属于他人任务，未操作；本项目本轮没有启动 GPU 进程。
 - Git main 已初始化；origin 指向指定 HTTPS URL。git ls-remote 返回码为 0、无任何 ref，远程在检查时为空，无需合并。
-- 认证检查仅保存配置存在性：已有 SSH key 文件，HTTPS credential helper 未配置；未读取任何凭据内容。是否有推送权限尚待实际 push。
+- 认证检查仅保存配置存在性：已有 SSH key 文件，HTTPS credential helper 未配置；未读取任何凭据内容。实际推送因 HTTPS 认证失败，详见下文。
 
 ## 执行数量和验收
 
@@ -49,3 +49,15 @@
 确认后先创建项目内独立 Python 环境，核实安装版本、官方 agent 和 train 数据，只做 1 任务 × 1 次完整执行。
 如有模型或其他大文件下载，另行提交大小、路径供确认。
 推送状态与 commit 以实际 git 证据/本轮最终汇报为准；不得将本报告生成时的“尚待 push”当作已推送。
+
+## 本检查点提交、验证和推送结果
+
+初始提交：38d024c754091c72c9ccb99fd6d70b845252ca37。执行 git push -u origin main 退出码 128。完整错误：
+
+    fatal: could not read Username for 'https://github.com': terminal prompts disabled
+
+证据：[git_push_attempt.json](evidence/git_push_attempt.json)。远程仍未发布本地提交。HTTPS 未配置可用认证，需要用户在服务器处理；不要求粘贴 token，不更换 URL、不修改 SSH 配置、不尝试替代认证。
+
+提交前已运行 git status 与 git diff --cached --stat；检查已暂存文本凭据模式、私钥、权重扩展名及 >50 MiB 文件，未发现问题，仓库约 200 KB，最大单文件约 92 KB。见 prepush_checks.json。忽略规则已验证覆盖 .env、credentials、权重、环境缓存、轨迹、tmp 与字节码。原始官方模型卡保留字节和 SHA256，包含上游行末空格；本项目自写文件通过 whitespace 检查。
+
+本轮没有实现运行代码，未运行实验或代码单元测试。JSON 证据解析、官方原文 SHA256 和忽略规则属于文档/仓库检查，不替代阶段 1 实验验收。到此停止等待用户处理认证并确认下一阶段。
