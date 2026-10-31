@@ -68,4 +68,6 @@
 
 只对本仓库设置 remote.origin.pushurl=git@github.com:ShiningIVYYY/ReAudit.git，保留 origin 的 HTTPS fetch URL。不改 SSH 配置、不读私钥内容、不新增 token。测试启用 StrictHostKeyChecking=yes 和 UpdateHostKeys=no，未写 known_hosts。证据：[github_ssh_auth.json](evidence/github_ssh_auth.json)。
 
-推送前再次检查远程，仍为空；准备执行原定 git push -u origin main。实际推送结果待本次操作返回后记录。下一阶段仍需用户确认。
+恢复推送前再次检查远程，仍为空；已执行原定 git push -u origin main，退出码 0，main 成功创建并设置跟踪 origin/main。首次成功推送 commit：1865d59b15b66f13da2748efd93eee0538b64ee3，UTC 2026-10-31T21:53:05.666752+00:00。随后读取 refs/heads/main 与该 commit 一致。证据：[git_ssh_push_success.json](evidence/git_ssh_push_success.json)。
+
+本恢复记录将再提交并正常推送；最终分支一致性检查保存在项目 tmp/git_sync_verification.json，并在最终汇报给出最新 commit。当前检查点只处理仓库发布，未安装环境或运行实验；下一阶段仍需用户确认。
