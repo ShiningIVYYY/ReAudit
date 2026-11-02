@@ -2,7 +2,7 @@
 
 当前状态：官方完整版 ReAct 已完成 1 次真实试跑（timeout，官方保存状态 TGC=0，0/49语法错误）；旧 minimal 的3次仅保留作诊断。新版16次和三模型统一采用该agent尚待确认。运行新版须显式使用 config/full_react_pilot.json；根 config.json 是已停止的旧诊断配置。见 reports/milestone_report.md 和 reports/full_react_pilot.md。
 
-AppWorld train 上的技能库消融实验。当前检查点：用户已确认继续 Qwen2.5-7B 固定基线的 8 任务 × 2 次。保持已固定的 official_minimal_react；是否换用官方完整版另行询问，不按未提交的选项擅自切换。其他模型和后续阶段不自动开始。
+AppWorld train 上的技能库消融平台。当前正式边界为上方所述的完整版单次试跑；旧 minimal 队列已停止。
 
 ## 固定环境与来源
 
@@ -95,7 +95,7 @@ SGC 是多任务场景聚合指标，本次单次执行不填 SGC；没有金额
 只操作本项目记录且核验 UID、启动时间和命令的进程组。检查点结束即释放 GPU。
 origin fetch URL 保持 HTTPS，push URL 为 git@github.com:ShiningIVYYY/ReAudit.git，仅此仓库生效。提交前检查敏感内容/权重/大文件，严禁 force push。密钥仅从 REAUDIT_API_KEY 环境变量读取，不写日志或 git；当前本地服务无需密钥。
 
-## 固定基线断点续跑
+## 断点续跑脚本（仅在确认所用 agent 和配置后执行）
 
     runtime/agent-venv/bin/python scripts/run_baseline_batch.py
     runtime/agent-venv/bin/python scripts/run_baseline_batch.py --execute
