@@ -1,0 +1,66 @@
+[
+  {
+    "task_id": "e3d6c94_3",
+    "fingerprints": [
+      "a0a5c507fcceee58d5964b9f43a9c878525ee5be5f18d4fc6d0b0271d31ce722",
+      "a0a5c507fcceee58d5964b9f43a9c878525ee5be5f18d4fc6d0b0271d31ce722"
+    ],
+    "identical": true
+  },
+  {
+    "task_id": "229360a_3",
+    "fingerprints": [
+      "8f1d92de7cdd141f8b7a3cdc328f893050a54102411c6011b551cfafe6684866",
+      "8f1d92de7cdd141f8b7a3cdc328f893050a54102411c6011b551cfafe6684866"
+    ],
+    "identical": true
+  },
+  {
+    "task_id": "82e2fac_2",
+    "fingerprints": [
+      "1f2f5e79562ec547db9e470e32d9c6e0939061179640f3669745436aba1ab321",
+      "1f2f5e79562ec547db9e470e32d9c6e0939061179640f3669745436aba1ab321"
+    ],
+    "identical": true
+  },
+  {
+    "task_id": "b7a9ee9_2",
+    "fingerprints": [
+      "ac15a3d5cec384291ec0e6c245557345ba2be2e212c407dfb190fa1448e4775f",
+      "ac15a3d5cec384291ec0e6c245557345ba2be2e212c407dfb190fa1448e4775f"
+    ],
+    "identical": true
+  },
+  {
+    "task_id": "afc0fce_2",
+    "fingerprints": [
+      "27a10a9641313aa3e67496a9341fd3c49cdd9059df6647b675398537562ee5a4",
+      "27a10a9641313aa3e67496a9341fd3c49cdd9059df6647b675398537562ee5a4"
+    ],
+    "identical": true
+  },
+  {
+    "task_id": "302c169_1",
+    "fingerprints": [
+      "5d3b4ae94d87bef493500727540cf23c65b1bb8beb0f5ec2fd136025d29be68a",
+      "5d3b4ae94d87bef493500727540cf23c65b1bb8beb0f5ec2fd136025d29be68a"
+    ],
+    "identical": true
+  },
+  {
+    "task_id": "e7a10f8_2",
+    "fingerprints": [
+      "3c05ce43a6f8f3443fe783f4cc4179e71ecba6f05e8fb33de7066028de1ee304",
+      "3c05ce43a6f8f3443fe783f4cc4179e71ecba6f05e8fb33de7066028de1ee304"
+    ],
+    "identical": true
+  },
+  {
+    "task_id": "22cc237_2",
+    "fingerprints": [
+      "11ca4c321da5037c40aa35231ea611fa38c7a02221132f0f527eed6054e2150b",
+      "11ca4c321da5037c40aa35231ea611fa38c7a02221132f0f527eed6054e2150b"
+    ],
+    "identical": true
+  }
+]

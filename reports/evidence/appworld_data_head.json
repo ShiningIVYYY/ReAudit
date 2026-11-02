@@ -1,0 +1,16 @@
+{
+  "url": "https://s3.us-west-2.amazonaws.com/appworld.dev/data-0.1.0.bundle",
+  "headers": {
+    "x-amz-id-2": "TbLsEHCqDfbN2rBq7945AmG90LbsLKBOtqLYvByJOKA+iV+/bU7qnLhPBCSFsvCkptvUipwL7WE=",
+    "x-amz-request-id": "80KCWDCWEV8G0FK0",
+    "Date": "Mon, 02 Nov 2026 20:28:18 GMT",
+    "Last-Modified": "Sat, 27 Jul 2024 14:53:17 GMT",
+    "ETag": "\"9b077001e5e1feba23cbab10d04de597-2\"",
+    "x-amz-server-side-encryption": "AES256",
+    "Accept-Ranges": "bytes",
+    "Content-Type": "binary/octet-stream",
+    "Content-Length": "34280074",
+    "Server": "AmazonS3",
+    "Connection": "close"
+  }
+}

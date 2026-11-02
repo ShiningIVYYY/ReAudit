@@ -1,0 +1,7 @@
+{
+  "timestamp_utc": "2026-11-02T20:38:21.835345+00:00",
+  "gpu_csv": "0, GPU-3dfef146-b745-8612-f47e-b80026b13796, NVIDIA GeForce RTX 4090, 10427, 13666, 41\n1, GPU-6b9f57a2-3ab5-8b7a-69b9-7311af633997, NVIDIA GeForce RTX 4090, 14043, 10050, 24\n2, GPU-701b290b-6a46-9933-30dd-7a6c97e78e18, NVIDIA GeForce RTX 4090, 16083, 8010, 49\n3, GPU-39ebdf55-76d2-8605-7962-f32907064c33, NVIDIA GeForce RTX 4090, 3, 24089, 0\n4, GPU-c915a346-0c7b-abd2-a9c6-42300fa44d7e, NVIDIA GeForce RTX 4090, 18701, 5392, 0\n5, GPU-1bbf10f9-76db-811b-a7ca-b5d3e706f579, NVIDIA GeForce RTX 4090, 17203, 6890, 28\n6, GPU-c7ecfb2c-cdc3-5791-0f7d-91227b095283, NVIDIA GeForce RTX 4090, 21973, 2120, 0\n7, GPU-3f53fb52-ef85-176b-8607-e21dc9d9d4b2, NVIDIA GeForce RTX 4090, 3, 24089, 0\n",
+  "compute_processes": "gpu_uuid, pid, process_name, used_gpu_memory [MiB]\nGPU-3dfef146-b745-8612-f47e-b80026b13796, 3878786, /data1/chz/.conda/.conda-envs/gemma4-v5/bin/python, 10418 MiB\nGPU-6b9f57a2-3ab5-8b7a-69b9-7311af633997, 3869757, /data1/chz/.conda/.conda-envs/gemma4-v5/bin/python, 14034 MiB\nGPU-701b290b-6a46-9933-30dd-7a6c97e78e18, 3878784, /data1/chz/.conda/.conda-envs/gemma4-v5/bin/python, 16074 MiB\nGPU-c915a346-0c7b-abd2-a9c6-42300fa44d7e, 3733606, /data/zsc/tools/llama.cpp/build/bin/llama-server, 18692 MiB\nGPU-1bbf10f9-76db-811b-a7ca-b5d3e706f579, 3881792, /data1/chz/.conda/.conda-envs/gemma4-v5/bin/python, 17194 MiB\nGPU-c7ecfb2c-cdc3-5791-0f7d-91227b095283, 3883185, VLLM::EngineCore, 21964 MiB\n",
+  "selected_gpu": 7,
+  "previous_start_refused": "GPU 2 occupied; no process started"
+}

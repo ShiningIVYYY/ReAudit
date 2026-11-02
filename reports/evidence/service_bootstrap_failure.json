@@ -1,0 +1,34 @@
+{
+  "timestamp_utc": "2026-11-02T20:39:52.537530+00:00",
+  "failure_type": "service_error",
+  "complete_executions": 0,
+  "inference_config": {
+    "framework": "vllm",
+    "version": "0.24.0",
+    "torch_version": "2.11.0+cu128",
+    "transformers_version": "5.13.0",
+    "python": "/home/shn/miniconda3/envs/vllm-cu128/bin/python",
+    "gpu_model": "NVIDIA GeForce RTX 4090",
+    "gpu_indices": [
+      7
+    ],
+    "gpu_uuids": {
+      "7": "GPU-3f53fb52-ef85-176b-8607-e21dc9d9d4b2"
+    },
+    "gpu_count": 1,
+    "max_model_len": 32768,
+    "tensor_parallel_size": 1,
+    "gpu_memory_utilization": 0.85,
+    "max_num_seqs": 1,
+    "max_num_batched_tokens": 4096,
+    "enforce_eager": true,
+    "seed": 123,
+    "generation_config": "vllm",
+    "idle_memory_threshold_mib": 32,
+    "startup_timeout_seconds": 240,
+    "readiness_poll_seconds": 2,
+    "execution_mode": "serial"
+  },
+  "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 189, in _run_module_as_main\n  File \"<frozen runpy>\", line 112, in _get_module_details\n  File \"/home/shn/miniconda3/envs/vllm-cu128/lib/python3.12/site-packages/vllm/__init__.py\", line 14, in <module>\n    import vllm.env_override  # noqa: F401\n    ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/shn/miniconda3/envs/vllm-cu128/lib/python3.12/site-packages/vllm/env_override.py\", line 90, in <module>\n    from vllm.utils.torch_utils import is_torch_equal, is_torch_equal_or_newer\n  File \"/home/shn/miniconda3/envs/vllm-cu128/lib/python3.12/site-packages/vllm/utils/torch_utils.py\", line 71, in <module>\n    PIN_MEMORY = is_pin_memory_available()\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/shn/miniconda3/envs/vllm-cu128/lib/python3.12/site-packages/vllm/utils/platform_utils.py\", line 44, in is_pin_memory_available\n    from vllm.platforms import current_platform\n  File \"/home/shn/miniconda3/envs/vllm-cu128/lib/python3.12/site-packages/vllm/platforms/__init__.py\", line 277, in __getattr__\n    _current_platform = resolve_obj_by_qualname(platform_cls_qualname)()\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/shn/miniconda3/envs/vllm-cu128/lib/python3.12/site-packages/vllm/utils/import_utils.py\", line 109, in resolve_obj_by_qualname\n    module = importlib.import_module(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/shn/miniconda3/envs/vllm-cu128/lib/python3.12/importlib/__init__.py\", line 90, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/shn/miniconda3/envs/vllm-cu128/lib/python3.12/site-packages/vllm/platforms/cuda.py\", line 22, in <module>\n    import vllm._C_stable_libtorch  # noqa\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nImportError: libcudart.so.13: cannot open shared object file: No such file or directory\n",
+  "action": "Do not modify existing environment or install CUDA13. Check another existing CUDA12.8-compatible vLLM environment."
+}

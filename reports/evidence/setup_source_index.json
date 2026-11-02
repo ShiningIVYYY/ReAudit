@@ -1,0 +1,66 @@
+{
+  "timestamp_utc": "2026-11-02T20:27:19.306989+00:00",
+  "appworld_source_commit": "main",
+  "sources": [
+    {
+      "file": "pyproject.toml",
+      "bytes": 13254,
+      "sha256": "7d1d4de00eb8344232c2484dfd0d1ea33e6bf002eeb1a8bf69708e212d9a3b3c",
+      "url": "https://raw.githubusercontent.com/stonybrooknlp/appworld/main/pyproject.toml"
+    },
+    {
+      "file": "src/appworld/common/constants.py",
+      "bytes": 1802,
+      "sha256": "776a1c2a97e8f3d7cbda00523be3fdf38ed6165d61ac729a82290a843524138d",
+      "url": "https://raw.githubusercontent.com/stonybrooknlp/appworld/main/src/appworld/common/constants.py"
+    },
+    {
+      "file": "src/appworld/common/crypto.py",
+      "bytes": 12060,
+      "sha256": "0d8f1f79c35e9351925ee26c7f9b465d669b131e1541ffca75429b3318d47b23",
+      "url": "https://raw.githubusercontent.com/stonybrooknlp/appworld/main/src/appworld/common/crypto.py"
+    },
+    {
+      "file": "src/appworld/download.py",
+      "bytes": 5331,
+      "sha256": "f781d5d48621f1a28e69ccabecbbbcfaa4fe35036f941a439f7db0502ae9c1c4",
+      "url": "https://raw.githubusercontent.com/stonybrooknlp/appworld/main/src/appworld/download.py"
+    },
+    {
+      "file": "notebooks/minimal_agent.ipynb",
+      "bytes": 16906,
+      "sha256": "f84ecc57509e6396bdfb814055c3dedb9328c743facca0bfd9b7436d7d378182",
+      "url": "https://raw.githubusercontent.com/stonybrooknlp/appworld/main/notebooks/minimal_agent.ipynb"
+    },
+    {
+      "file": "src/appworld/task.py",
+      "bytes": 13644,
+      "sha256": "f999c02316639eae33316ad5bac52c58c217a80ee553f38b3084eb5ea18c5d7e",
+      "url": "https://raw.githubusercontent.com/stonybrooknlp/appworld/main/src/appworld/task.py"
+    },
+    {
+      "file": "src/appworld/environment.py",
+      "bytes": 61754,
+      "sha256": "f988f1e6f257041e73682725522662674d4d65e8a1673787614f54b89fe2baeb",
+      "url": "https://raw.githubusercontent.com/stonybrooknlp/appworld/main/src/appworld/environment.py"
+    },
+    {
+      "file": "src/appworld/evaluator.py",
+      "bytes": 25769,
+      "sha256": "bde9deb3b1e6ac0fa9819013729c0e817a97c90f579108fa032a90bba0ca51cb",
+      "url": "https://raw.githubusercontent.com/stonybrooknlp/appworld/main/src/appworld/evaluator.py"
+    },
+    {
+      "file": "src/appworld/__init__.py",
+      "bytes": 1790,
+      "sha256": "20d2b0c9a92945a40700270e1d4bf8a99f4376a61f5a95574a9c78f69ce79651",
+      "url": "https://raw.githubusercontent.com/stonybrooknlp/appworld/main/src/appworld/__init__.py"
+    },
+    {
+      "file": "experiments/pyproject.toml",
+      "bytes": 3739,
+      "sha256": "8c8bc5ad16b26d3e2ad5a879af90f0861088ded0ae285ec4633e511ffb5375a5",
+      "url": "https://raw.githubusercontent.com/stonybrooknlp/appworld/main/experiments/pyproject.toml"
+    }
+  ]
+}

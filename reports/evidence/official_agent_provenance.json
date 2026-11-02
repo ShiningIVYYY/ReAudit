@@ -1,0 +1,9 @@
+{
+  "source_commit": "66ad8099e12188ece0d3fe45e661dbc01880813b",
+  "notebook_sha256": "bfa217b1c2b480a634aa4e56741e874bdadb4291fbfdb77d07ae11b09b19f6aa",
+  "prompt_assignment_sha256": "79e8803d011b7718c2393a7e42408ed059a5ee896a4972b534c64a74afe3a4f8",
+  "agent_class_sha256": "6ecd1ccb37cae7d7f2d8d7d671d713bea72cb81461115f014f7090922b34ed64",
+  "runtime_version": "0.1.3.post1",
+  "imports_only_adjustment": "Task import under TYPE_CHECKING; annotations postponed",
+  "class_and_prompt_unchanged": true
+}
