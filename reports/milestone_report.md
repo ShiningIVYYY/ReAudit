@@ -11,11 +11,11 @@
 - 全部 8 个任务两次独立进程初始化；保存实际初始 DB 快照并计算 SHA256，8/8 指纹相同。16 次 CPU reset 检查不调用模型、不算完整执行。证据 initial_state_checks.json。
 - 10 项关键测试通过：官方源码保真、no_skill prompt 一致、技能移除、token usage、真实时钟、context_overflow/parse_error/service_error/timeout 和请求中断用量未知。异常测试使用 mock HTTP，不消耗 GPU，不冒充真实异常执行验收。
 - 模型 revision a09a35458c702b33eeacc393d103063234e8bc28，BF16、无量化、32768 上下文，单张 RTX 4090 物理 GPU 7，串行 max_num_seqs=1，temperature=0.7，top_p=0.8，top_k=20，repetition_penalty=1.05，max_tokens=1024，max_steps=50，完整执行超时600秒，单次请求60秒，单次代码30秒；所有值来自 config。
-- vLLM 0.11.0 / PyTorch 2.8.0 CUDA 12.8 / Transformers 4.57.3 既有环境已导入并启动成功；/v1/models 能正确列出目标模型和 32768 上下文。尚未在此报告生成时开始模型完整执行。
+- vLLM 0.11.0 / PyTorch 2.8.0 CUDA 12.8 / Transformers 4.57.3 既有环境已导入并启动成功；/v1/models 能正确列出目标模型和 32768 上下文。单次模型执行现已结束，详见结果。
 
 ## 真实执行结果
 
-待单任务试跑返回后更新。当前不能报告成功率或典型成本。
+单次执行已结束：run_id=run_20261102T204402_a2ede390b641484bb7412ff0cffcb191，task_id=e3d6c94_3，status=error，failure_type=context_overflow，score=未验证/未知。结果和 token/耗时/初始状态/重评分证据见 smoke_report.md 与 evidence/smoke_checks.json。本次只完成 1 个完整执行，不能估计总体成功率或典型成本。
 
 ## 实现语义与限制
 
