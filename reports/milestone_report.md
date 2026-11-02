@@ -61,3 +61,101 @@ vLLM=0.11.0，PyTorch=2.8.0/CUDA12.8，Transformers=4.57.3；BF16、不量化；
 ## Approved full baseline continuation
 
 用户已确认继续 Qwen2.5-7B 新版8×2。根配置切换为已试跑的 official_full_react，模型/解码/50步/600秒上限/seed未变；仅 purpose 元数据改为 baseline_full_react。续跑应复用新版已有 timeout 试跑，新增15次，不重试失败；完成后受控0.05秒超时检查单列，停止并释放GPU、复读官方评分、提交推送，等待下一模型确认。
+
+## Qwen2.5 fixed-baseline continuation
+
+{
+  "model_id": "Qwen/Qwen2.5-7B-Instruct",
+  "agent_id": "official_full_react",
+  "experiment_signature": "a9011e8bcce0d6574120478526a7c71e1156c47a0f7d66eadafb2b9a440bedf7",
+  "planned_slots": 16,
+  "completed_slots": 16,
+  "run_ids": [
+    "run_20261102T222456_8c8bccbc839842cc9d44895dbb00875a",
+    "run_20261102T230212_736476b8c5d54ea2b7f8073ba1919720",
+    "run_20261102T230707_164682126e1b42478d075a57795b709c",
+    "run_20261102T230749_5cff677387ae42ca8c91973478cee6bd",
+    "run_20261102T230819_a425076cf16145c2afba0216b14093d2",
+    "run_20261102T230852_18e65ad9ad7843929c4fc1c9a6cec9c8",
+    "run_20261102T230909_5039e457977c4009ad38089ada84864a",
+    "run_20261102T230946_7a0643bcd24449bb84d5f8012fbd95df",
+    "run_20261102T231137_c693ecf494eb43d3b20ae8216f3fe78b",
+    "run_20261102T231451_f930d46cde424c7f9cfe0fdfa3be352f",
+    "run_20261102T232100_6a716561bccb451cb385c4e83dbc4db2",
+    "run_20261102T232132_a96809c7496f42c4aaaa4484331449f9",
+    "run_20261102T232244_c0930a27c7a14045be73acdf76e701ef",
+    "run_20261102T232306_f6fb599c7d024d10a9cda0e8e0fe61c8",
+    "run_20261102T232355_3b993ddb647440dd88ea35523749c55d",
+    "run_20261102T232504_017a9f874bd242acb2e475105922ac8b"
+  ],
+  "cost_counted_unique_run_ids": 16,
+  "known_scores": 16,
+  "unknown_scores": 0,
+  "successes": 0,
+  "success_rate_evaluated": 0.0,
+  "confirmed_success_fraction_all_attempts": 0.0,
+  "failure_type_counts": {
+    "timeout": 1,
+    "task_failed": 15
+  },
+  "exact_usage_runs": 15,
+  "known_prompt_tokens": 1524492,
+  "known_completion_tokens": 102126,
+  "mean_exact_prompt_tokens": 84283.46666666666,
+  "mean_exact_completion_tokens": 4649.866666666667,
+  "mean_latency_seconds": 127.92125538305845,
+  "fault_injection_run_id": "run_20261102T232619_d1f788291b9e4596983df4b27ec84989",
+  "timestamp_utc": "2026-11-02T23:27:09.200846+00:00",
+  "per_task": [
+    {
+      "task_id": "e3d6c94_3",
+      "executions": 2,
+      "successes": 0,
+      "unknown_scores": 0
+    },
+    {
+      "task_id": "229360a_3",
+      "executions": 2,
+      "successes": 0,
+      "unknown_scores": 0
+    },
+    {
+      "task_id": "82e2fac_2",
+      "executions": 2,
+      "successes": 0,
+      "unknown_scores": 0
+    },
+    {
+      "task_id": "b7a9ee9_2",
+      "executions": 2,
+      "successes": 0,
+      "unknown_scores": 0
+    },
+    {
+      "task_id": "afc0fce_2",
+      "executions": 2,
+      "successes": 0,
+      "unknown_scores": 0
+    },
+    {
+      "task_id": "302c169_1",
+      "executions": 2,
+      "successes": 0,
+      "unknown_scores": 0
+    },
+    {
+      "task_id": "e7a10f8_2",
+      "executions": 2,
+      "successes": 0,
+      "unknown_scores": 0
+    },
+    {
+      "task_id": "22cc237_2",
+      "executions": 2,
+      "successes": 0,
+      "unknown_scores": 0
+    }
+  ]
+}
+
+Original failed executions are retained and counted once by run_id. Any later official saved-state score fills an unknown score without changing failure_type; score_enrichment.json is kept in each local trace. Posthoc evaluation cost is separate. Raw scoring outputs are not exported to git. No other model or later stage was started automatically.

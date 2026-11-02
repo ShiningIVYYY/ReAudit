@@ -1,0 +1,202 @@
+{
+  "checks": [
+    {
+      "run_id": "run_20261102T222456_8c8bccbc839842cc9d44895dbb00875a",
+      "task_id": "e3d6c94_3",
+      "snapshot_matches_initial_check": true,
+      "input_hash_matches_trace": true,
+      "rescore_returncode": 0,
+      "rescore_tgc": 0,
+      "rescore_matches": true
+    },
+    {
+      "run_id": "run_20261102T230212_736476b8c5d54ea2b7f8073ba1919720",
+      "task_id": "e3d6c94_3",
+      "snapshot_matches_initial_check": true,
+      "input_hash_matches_trace": true,
+      "rescore_returncode": 0,
+      "rescore_tgc": 0,
+      "rescore_matches": true
+    },
+    {
+      "run_id": "run_20261102T230707_164682126e1b42478d075a57795b709c",
+      "task_id": "229360a_3",
+      "snapshot_matches_initial_check": true,
+      "input_hash_matches_trace": true,
+      "rescore_returncode": 0,
+      "rescore_tgc": 0,
+      "rescore_matches": true
+    },
+    {
+      "run_id": "run_20261102T230749_5cff677387ae42ca8c91973478cee6bd",
+      "task_id": "229360a_3",
+      "snapshot_matches_initial_check": true,
+      "input_hash_matches_trace": true,
+      "rescore_returncode": 0,
+      "rescore_tgc": 0,
+      "rescore_matches": true
+    },
+    {
+      "run_id": "run_20261102T230819_a425076cf16145c2afba0216b14093d2",
+      "task_id": "82e2fac_2",
+      "snapshot_matches_initial_check": true,
+      "input_hash_matches_trace": true,
+      "rescore_returncode": 0,
+      "rescore_tgc": 0,
+      "rescore_matches": true
+    },
+    {
+      "run_id": "run_20261102T230852_18e65ad9ad7843929c4fc1c9a6cec9c8",
+      "task_id": "82e2fac_2",
+      "snapshot_matches_initial_check": true,
+      "input_hash_matches_trace": true,
+      "rescore_returncode": 0,
+      "rescore_tgc": 0,
+      "rescore_matches": true
+    },
+    {
+      "run_id": "run_20261102T230909_5039e457977c4009ad38089ada84864a",
+      "task_id": "b7a9ee9_2",
+      "snapshot_matches_initial_check": true,
+      "input_hash_matches_trace": true,
+      "rescore_returncode": 0,
+      "rescore_tgc": 0,
+      "rescore_matches": true
+    },
+    {
+      "run_id": "run_20261102T230946_7a0643bcd24449bb84d5f8012fbd95df",
+      "task_id": "b7a9ee9_2",
+      "snapshot_matches_initial_check": true,
+      "input_hash_matches_trace": true,
+      "rescore_returncode": 0,
+      "rescore_tgc": 0,
+      "rescore_matches": true
+    },
+    {
+      "run_id": "run_20261102T231137_c693ecf494eb43d3b20ae8216f3fe78b",
+      "task_id": "afc0fce_2",
+      "snapshot_matches_initial_check": true,
+      "input_hash_matches_trace": true,
+      "rescore_returncode": 0,
+      "rescore_tgc": 0,
+      "rescore_matches": true
+    },
+    {
+      "run_id": "run_20261102T231451_f930d46cde424c7f9cfe0fdfa3be352f",
+      "task_id": "afc0fce_2",
+      "snapshot_matches_initial_check": true,
+      "input_hash_matches_trace": true,
+      "rescore_returncode": 0,
+      "rescore_tgc": 0,
+      "rescore_matches": true
+    },
+    {
+      "run_id": "run_20261102T232100_6a716561bccb451cb385c4e83dbc4db2",
+      "task_id": "302c169_1",
+      "snapshot_matches_initial_check": true,
+      "input_hash_matches_trace": true,
+      "rescore_returncode": 0,
+      "rescore_tgc": 0,
+      "rescore_matches": true
+    },
+    {
+      "run_id": "run_20261102T232132_a96809c7496f42c4aaaa4484331449f9",
+      "task_id": "302c169_1",
+      "snapshot_matches_initial_check": true,
+      "input_hash_matches_trace": true,
+      "rescore_returncode": 0,
+      "rescore_tgc": 0,
+      "rescore_matches": true
+    },
+    {
+      "run_id": "run_20261102T232244_c0930a27c7a14045be73acdf76e701ef",
+      "task_id": "e7a10f8_2",
+      "snapshot_matches_initial_check": true,
+      "input_hash_matches_trace": true,
+      "rescore_returncode": 0,
+      "rescore_tgc": 0,
+      "rescore_matches": true
+    },
+    {
+      "run_id": "run_20261102T232306_f6fb599c7d024d10a9cda0e8e0fe61c8",
+      "task_id": "e7a10f8_2",
+      "snapshot_matches_initial_check": true,
+      "input_hash_matches_trace": true,
+      "rescore_returncode": 0,
+      "rescore_tgc": 0,
+      "rescore_matches": true
+    },
+    {
+      "run_id": "run_20261102T232355_3b993ddb647440dd88ea35523749c55d",
+      "task_id": "22cc237_2",
+      "snapshot_matches_initial_check": true,
+      "input_hash_matches_trace": true,
+      "rescore_returncode": 0,
+      "rescore_tgc": 0,
+      "rescore_matches": true
+    },
+    {
+      "run_id": "run_20261102T232504_017a9f874bd242acb2e475105922ac8b",
+      "task_id": "22cc237_2",
+      "snapshot_matches_initial_check": true,
+      "input_hash_matches_trace": true,
+      "rescore_returncode": 0,
+      "rescore_tgc": 0,
+      "rescore_matches": true
+    }
+  ],
+  "repeat_checks": [
+    {
+      "task_id": "e3d6c94_3",
+      "executions": 2,
+      "same_initial_fingerprint": true,
+      "same_initial_prompt_hash": true
+    },
+    {
+      "task_id": "229360a_3",
+      "executions": 2,
+      "same_initial_fingerprint": true,
+      "same_initial_prompt_hash": true
+    },
+    {
+      "task_id": "82e2fac_2",
+      "executions": 2,
+      "same_initial_fingerprint": true,
+      "same_initial_prompt_hash": true
+    },
+    {
+      "task_id": "b7a9ee9_2",
+      "executions": 2,
+      "same_initial_fingerprint": true,
+      "same_initial_prompt_hash": true
+    },
+    {
+      "task_id": "afc0fce_2",
+      "executions": 2,
+      "same_initial_fingerprint": true,
+      "same_initial_prompt_hash": true
+    },
+    {
+      "task_id": "302c169_1",
+      "executions": 2,
+      "same_initial_fingerprint": true,
+      "same_initial_prompt_hash": true
+    },
+    {
+      "task_id": "e7a10f8_2",
+      "executions": 2,
+      "same_initial_fingerprint": true,
+      "same_initial_prompt_hash": true
+    },
+    {
+      "task_id": "22cc237_2",
+      "executions": 2,
+      "same_initial_fingerprint": true,
+      "same_initial_prompt_hash": true
+    }
+  ],
+  "model_calls": 0,
+  "all_snapshot_checks_pass": true,
+  "all_input_hash_checks_pass": true,
+  "all_known_scores_repeat": true
+}
