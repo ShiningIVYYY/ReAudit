@@ -92,7 +92,9 @@
   },
   "validation": {
     "initial_state_repeats": 2,
-    "reset_timeout_seconds": 90
+    "reset_timeout_seconds": 90,
+    "fault_timeout_seconds": 0.05,
+    "cleanup_timeout_seconds": 30
   },
   "paths": {
     "appworld_root": "runtime/appworld",

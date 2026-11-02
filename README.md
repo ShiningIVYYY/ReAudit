@@ -1,6 +1,6 @@
 # ReAudit
 
-AppWorld train 上的技能库消融实验。当前检查点：Qwen2.5-7B 的 1 任务端到端试跑；尚未批准 16 次批量运行或其他模型。
+AppWorld train 上的技能库消融实验。当前检查点：用户已确认继续 Qwen2.5-7B 固定基线的 8 任务 × 2 次。保持已固定的 official_minimal_react；是否换用官方完整版另行询问，不按未提交的选项擅自切换。其他模型和后续阶段不自动开始。
 
 ## 固定环境与来源
 
@@ -92,3 +92,14 @@ SGC 是多任务场景聚合指标，本次单次执行不填 SGC；没有金额
 
 只操作本项目记录且核验 UID、启动时间和命令的进程组。检查点结束即释放 GPU。
 origin fetch URL 保持 HTTPS，push URL 为 git@github.com:ShiningIVYYY/ReAudit.git，仅此仓库生效。提交前检查敏感内容/权重/大文件，严禁 force push。密钥仅从 REAUDIT_API_KEY 环境变量读取，不写日志或 git；当前本地服务无需密钥。
+
+## 固定基线断点续跑
+
+    runtime/agent-venv/bin/python scripts/run_baseline_batch.py
+    runtime/agent-venv/bin/python scripts/run_baseline_batch.py --execute
+
+第一条只生成计划，不调用模型。第二条仅在获准继续当前模型阶段后执行：复用同 agent/model/config 签名的既有 run_id，包括失败执行；原试跑占 16 个槽位之一，其余 15 个串行执行。不同 agent 结果不会混入同一张基线表。每个新执行都调用同一隔离 worker；采样 seed 与任务清单不变。
+
+异常执行如果已保存有效环境输出，会另用官方评测程序读取该状态，将原先未知的 TGC 补充为实际评分；保留原始 status/failure_type，不改记 task_failed。附加评分不调用模型，耗时与证据保存在本地 score_enrichment.json，原始轨迹不变。CSV 为派生汇总，补充评分不新增 run_id 或重复计费。
+
+16 个槽位结束后额外做一次 0.05 秒的完整执行 watchdog 测试，配置单独保存在 config/timeout_check.json；该行因超时配置签名不同而排除在 16 次基线统计之外。模型服务会停止并记录资源释放，结果只导出摘要、哈希与计数，原始评测明细不进入 git。后台状态：runtime/qwen25-batch-status.json；日志：runtime/qwen25-batch.log。可在 runtime/pause-qwen25-batch.json 创建暂停请求，脚本在当前完整执行结束后停止，不打断当前任务。
