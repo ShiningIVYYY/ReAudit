@@ -1,0 +1,11 @@
+{
+  "service_started_by_this_batch": true,
+  "stop_result": {
+    "returncode": 0,
+    "output": "Sent SIGTERM only to this project's recorded service process group.\n"
+  },
+  "service_pid_exists_after_stop": false,
+  "gpu_snapshot_after_stop": "index, uuid, memory.used [MiB], utilization.gpu [%]\n7, GPU-3f53fb52-ef85-176b-8607-e21dc9d9d4b2, 3 MiB, 0 %\n",
+  "service_launch_unix": 1793655026.9255447,
+  "cleanup_record_unix": 1793656028.7302823
+}

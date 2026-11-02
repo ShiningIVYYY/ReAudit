@@ -44,3 +44,88 @@ GPU 服务已退出，物理 GPU 7 复查仅 3 MiB、0% 利用率；后台作业
 初版 reports/evidence/smoke_checks.json 在提交 60868c60217db18136c19910708816d4a07fdf83 中误包含原始评分 traceback/评测明细。现已从工作版本移除并改为计数、摘要和哈希，完整明细仅留在 git 忽略的轨迹目录；后台脚本也已修正，避免后续再次把原始评分明细写入可提交报告。该旧提交仍保留这些明细，遵守用户禁止改写已推送历史的约束，没有 force push 或重写历史。此项不能声称历史已清理，后续处理需用户决定。没有发现真实 API key 或用户凭据。
 
 本次试跑耗时约 8.88 分钟，服务 launch-to-stop-record 占用窗口更长，见 gpu_release.json；加载、准备与闲置等待不应当被隐去。当前结果不足以支持直接扩到 16 次，尤其 36/37 步语法失败已表明格式遵从问题；未提高上下文、未改 parser、未修改官方评分。下一步等待用户确认。
+
+## Qwen2.5 fixed-baseline continuation
+
+{
+  "model_id": "Qwen/Qwen2.5-7B-Instruct",
+  "agent_id": "official_minimal_react",
+  "experiment_signature": "a7815354fb7347193c0ef68046cfb08364c48d0e4ccccfaddad5a7c4808ed92e",
+  "planned_slots": 16,
+  "completed_slots": 3,
+  "run_ids": [
+    "run_20261102T204402_a2ede390b641484bb7412ff0cffcb191",
+    "run_20261102T213053_fbb7e8c955fb4d25917e98d554cbe4df",
+    "run_20261102T214003_d5e4489aaa1543a2a2380b28d720de6d"
+  ],
+  "cost_counted_unique_run_ids": 3,
+  "known_scores": 3,
+  "unknown_scores": 0,
+  "successes": 0,
+  "success_rate_evaluated": 0.0,
+  "confirmed_success_fraction_all_attempts": 0.0,
+  "failure_type_counts": {
+    "context_overflow": 2,
+    "task_failed": 1
+  },
+  "exact_usage_runs": 1,
+  "known_prompt_tokens": 1802387,
+  "known_completion_tokens": 80491,
+  "mean_exact_prompt_tokens": 728644.0,
+  "mean_exact_completion_tokens": 22621.0,
+  "mean_latency_seconds": 501.157679160436,
+  "fault_injection_run_id": null,
+  "timestamp_utc": "2026-11-02T21:47:08.731200+00:00",
+  "per_task": [
+    {
+      "task_id": "e3d6c94_3",
+      "executions": 2,
+      "successes": 0,
+      "unknown_scores": 0
+    },
+    {
+      "task_id": "229360a_3",
+      "executions": 1,
+      "successes": 0,
+      "unknown_scores": 0
+    },
+    {
+      "task_id": "82e2fac_2",
+      "executions": 0,
+      "successes": 0,
+      "unknown_scores": 0
+    },
+    {
+      "task_id": "b7a9ee9_2",
+      "executions": 0,
+      "successes": 0,
+      "unknown_scores": 0
+    },
+    {
+      "task_id": "afc0fce_2",
+      "executions": 0,
+      "successes": 0,
+      "unknown_scores": 0
+    },
+    {
+      "task_id": "302c169_1",
+      "executions": 0,
+      "successes": 0,
+      "unknown_scores": 0
+    },
+    {
+      "task_id": "e7a10f8_2",
+      "executions": 0,
+      "successes": 0,
+      "unknown_scores": 0
+    },
+    {
+      "task_id": "22cc237_2",
+      "executions": 0,
+      "successes": 0,
+      "unknown_scores": 0
+    }
+  ]
+}
+
+Original failed executions are retained and counted once by run_id. Any later official saved-state score fills an unknown score without changing failure_type; score_enrichment.json is kept in each local trace. Posthoc evaluation cost is separate. Raw scoring outputs are not exported to git. No other model or later stage was started automatically.

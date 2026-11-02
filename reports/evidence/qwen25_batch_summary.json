@@ -1,0 +1,80 @@
+{
+  "model_id": "Qwen/Qwen2.5-7B-Instruct",
+  "agent_id": "official_minimal_react",
+  "experiment_signature": "a7815354fb7347193c0ef68046cfb08364c48d0e4ccccfaddad5a7c4808ed92e",
+  "planned_slots": 16,
+  "completed_slots": 3,
+  "run_ids": [
+    "run_20261102T204402_a2ede390b641484bb7412ff0cffcb191",
+    "run_20261102T213053_fbb7e8c955fb4d25917e98d554cbe4df",
+    "run_20261102T214003_d5e4489aaa1543a2a2380b28d720de6d"
+  ],
+  "cost_counted_unique_run_ids": 3,
+  "known_scores": 3,
+  "unknown_scores": 0,
+  "successes": 0,
+  "success_rate_evaluated": 0.0,
+  "confirmed_success_fraction_all_attempts": 0.0,
+  "failure_type_counts": {
+    "context_overflow": 2,
+    "task_failed": 1
+  },
+  "exact_usage_runs": 1,
+  "known_prompt_tokens": 1802387,
+  "known_completion_tokens": 80491,
+  "mean_exact_prompt_tokens": 728644.0,
+  "mean_exact_completion_tokens": 22621.0,
+  "mean_latency_seconds": 501.157679160436,
+  "fault_injection_run_id": null,
+  "timestamp_utc": "2026-11-02T21:47:08.731200+00:00",
+  "per_task": [
+    {
+      "task_id": "e3d6c94_3",
+      "executions": 2,
+      "successes": 0,
+      "unknown_scores": 0
+    },
+    {
+      "task_id": "229360a_3",
+      "executions": 1,
+      "successes": 0,
+      "unknown_scores": 0
+    },
+    {
+      "task_id": "82e2fac_2",
+      "executions": 0,
+      "successes": 0,
+      "unknown_scores": 0
+    },
+    {
+      "task_id": "b7a9ee9_2",
+      "executions": 0,
+      "successes": 0,
+      "unknown_scores": 0
+    },
+    {
+      "task_id": "afc0fce_2",
+      "executions": 0,
+      "successes": 0,
+      "unknown_scores": 0
+    },
+    {
+      "task_id": "302c169_1",
+      "executions": 0,
+      "successes": 0,
+      "unknown_scores": 0
+    },
+    {
+      "task_id": "e7a10f8_2",
+      "executions": 0,
+      "successes": 0,
+      "unknown_scores": 0
+    },
+    {
+      "task_id": "22cc237_2",
+      "executions": 0,
+      "successes": 0,
+      "unknown_scores": 0
+    }
+  ]
+}
