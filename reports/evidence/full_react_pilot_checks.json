@@ -1,0 +1,72 @@
+{
+  "run_id": "run_20261102T222456_8c8bccbc839842cc9d44895dbb00875a",
+  "row": {
+    "run_id": "run_20261102T222456_8c8bccbc839842cc9d44895dbb00875a",
+    "task_id": "e3d6c94_3",
+    "scene_id": "e3d6c94",
+    "condition": "no_skill",
+    "skill_ids": "[]",
+    "skill_versions": "{}",
+    "removed_skill": "",
+    "model_id": "Qwen/Qwen2.5-7B-Instruct",
+    "decoding_config": "{\"max_tokens\":1024,\"repetition_penalty\":1.05,\"temperature\":0.7,\"top_k\":20,\"top_p\":0.8}",
+    "environment_snapshot_fingerprint": "a0a5c507fcceee58d5964b9f43a9c878525ee5be5f18d4fc6d0b0271d31ce722",
+    "full_input_hash": "0f698153689b9ccc471443af48516095b0583307f3d99347e3b392194e57e1e4",
+    "sampling_seed": "123",
+    "score": "",
+    "sgc": "",
+    "prompt_tokens": "",
+    "completion_tokens": "",
+    "latency_seconds": "600.1158854402602",
+    "gpu_info": "{\"enforce_eager\":true,\"execution_mode\":\"serial\",\"framework\":\"vllm\",\"generation_config\":\"vllm\",\"gpu_count\":1,\"gpu_indices\":[7],\"gpu_memory_utilization\":0.85,\"gpu_model\":\"NVIDIA GeForce RTX 4090\",\"gpu_uuids\":{\"7\":\"GPU-3f53fb52-ef85-176b-8607-e21dc9d9d4b2\"},\"idle_memory_threshold_mib\":32,\"max_model_len\":32768,\"max_num_batched_tokens\":4096,\"max_num_seqs\":1,\"python\":\"/home/shn/miniconda3/envs/verl-agent/bin/python\",\"readiness_poll_seconds\":2,\"seed\":123,\"startup_timeout_seconds\":240,\"telemetry\":\"runs/traces/run_20261102T222456_8c8bccbc839842cc9d44895dbb00875a/gpu.jsonl\",\"tensor_parallel_size\":1,\"torch_version\":\"2.8.0\",\"transformers_version\":\"4.57.3\",\"version\":\"0.11.0\"}",
+    "num_steps": "49",
+    "status": "error",
+    "failure_type": "timeout",
+    "timestamp": "2026-11-02T22:24:56.271260+00:00",
+    "execution_mode": "serial",
+    "usage_complete": "False",
+    "known_prompt_tokens": "260240",
+    "known_completion_tokens": "32378",
+    "llm_latency_seconds": "574.4012886099517",
+    "syntax_error_steps": "0",
+    "repeat_index": "0",
+    "config_sha256": "6a701f107006acbe98d0c74590404ab71ab6fe8061dc758e2a18a03771d400ad",
+    "git_commit": "3dd2729511ca8297b365bb2d85028d1873c35f13",
+    "trace_path": "runs/traces/run_20261102T222456_8c8bccbc839842cc9d44895dbb00875a"
+  },
+  "model_calls_started": 50,
+  "model_calls_returned": 49,
+  "syntax_error_steps": 0,
+  "full_input_hash_matches": true,
+  "initial_state_matches_both_resets": true,
+  "exact_usage": {
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "known_prompt_tokens": 260240,
+    "known_completion_tokens": 32378,
+    "usage_complete": false,
+    "llm_latency_seconds": 574.4012886099517
+  },
+  "required_columns_present": true,
+  "run_id_unique": true,
+  "rescore_returncode": 0,
+  "rescore_summary": {
+    "returncode": 0
+  },
+  "raw_rescore_output_location": "runs/traces/run_20261102T222456_8c8bccbc839842cc9d44895dbb00875a/diagnostic_evaluation_command.json",
+  "model_calls_during_rescore": 0,
+  "gpu_memory_peak_mib": 21325,
+  "gpu_samples": 558,
+  "service_stop": {
+    "command": [
+      "/data1/shn/ReAudit/runtime/agent-venv/bin/python",
+      "-B",
+      "scripts/serve_model.py",
+      "stop"
+    ],
+    "returncode": 0,
+    "output": "Sent SIGTERM only to this project's recorded service process group.\n"
+  },
+  "trace_path": "runs/traces/run_20261102T222456_8c8bccbc839842cc9d44895dbb00875a",
+  "cost_recovery_needed": false
+}

@@ -135,3 +135,7 @@ Original failed executions are retained and counted once by run_id. Any later of
 用户明确选择先试官方完整版 ReAct。旧 minimal 队列在当前任务结束后停于 3 次（0/3 TGC，2 context_overflow、1 task_failed），GPU 已释放；旧 16 次计划未完成且不冒充验收通过。原结果继续计费一次。
 原 Recoma 整包安装计划因 PyPI 缺失 litellm==1.37.19 而失败，未配置镜像。当前使用官方 PyPI wheel 中原文 core/search 源码，仅包初始化避开未使用后端；所有 agent/controller/parser 方法哈希未变。新增 treelib=1.8.0、six=1.17.0。20 项测试通过；CPU mock 用官方 parser/search/environment/answerer 跑通 1 步，真实模型调用 0，故不进入真实 runs.csv。
 下一步只做 e3d6c94_3 的一次 full-ReAct GPU 试跑，独立 config/full_react_pilot.json。尚未报告该新版成功率；旧 minimal 结果不作新版结果。
+
+## Approved official full-ReAct pilot
+
+Agent=official_full_react; run_id=run_20261102T222456_8c8bccbc839842cc9d44895dbb00875a; status=error; failure_type=timeout; score=未验证/未知. The old minimal queue was stopped at 3 executions on user selection; all original costs/results remain. This is a distinct agent signature, not a retry or a continuation of the same 16-run baseline. See full_react_pilot.md and evidence/full_react_pilot_checks.json. Only one full-ReAct GPU execution was authorized and performed; stop for user confirmation.
