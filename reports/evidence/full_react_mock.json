@@ -1,0 +1,11 @@
+{
+  "kind": "CPU mock integration only",
+  "task_id": "e3d6c94_3",
+  "real_model_calls": 0,
+  "gpu_used": false,
+  "environment_steps": 1,
+  "mock_backend_calls": 1,
+  "syntax_errors": 0,
+  "initial_input_hash_verified": true,
+  "official_score_intentionally_unsolved": false
+}

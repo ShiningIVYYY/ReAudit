@@ -41,42 +41,49 @@ def main():
         world = AppWorld(
             task_id=args.task_id, experiment_name=experiment_name,
             max_interactions=a["max_steps"], random_seed=a["environment_seed"],
-            timeout_seconds=a["code_timeout_seconds"], load_ground_truth=False)
+            timeout_seconds=a["code_timeout_seconds"],
+            load_ground_truth=config["agent"]["implementation"] == "official_full_react")
         with world:
             result["environment_snapshot_fingerprint"] = fingerprint(
                 world, run_dir / "initial_dbs", config)
-            full_input = build_prompt(world.task, skills, condition)
-            (run_dir / "full_input.txt").write_text(full_input)
-            result["full_input_hash"] = digest(full_input)
-            write_json(run_dir / "progress.json", result)
-            adapter = OpenAIAdapter(config, journal, seed)
-            official.call_llm = adapter.complete
-
-            class Agent(official.MinimalReactAgent):
-                def prompt_messages(self):
-                    return prompt_to_messages(build_prompt(self.task, skills, condition))
-
-            agent = Agent(world.task)
-            journal.append("initial_state", **result)
-            output = None
-            for step in range(a["max_steps"]):
-                code = agent.next_code_block(output)
-                # Observe Python syntax; pass the original output to world.execute unchanged.
-                try:
-                    ast.parse(code)
-                    result["valid_code_steps"] += 1
-                    syntax_ok = True
-                except SyntaxError:
-                    result["syntax_error_steps"] += 1
-                    syntax_ok = False
-                result["num_steps"] += 1
-                journal.append("environment_start", step=step + 1, code=code,
-                               syntax_ok=syntax_ok)
-                output = world.execute(code)
-                journal.append("environment_end", step=step + 1, output=output)
+            if config["agent"]["implementation"] == "official_full_react":
+                from .full_react import run_full_react
+                adapter = OpenAIAdapter(config, journal, seed)
+                journal.append("initial_state", **result)
+                run_full_react(world, config, adapter, journal, run_dir, result)
+            else:
+                full_input = build_prompt(world.task, skills, condition)
+                (run_dir / "full_input.txt").write_text(full_input)
+                result["full_input_hash"] = digest(full_input)
                 write_json(run_dir / "progress.json", result)
-                if world.task_completed():
-                    break
+                adapter = OpenAIAdapter(config, journal, seed)
+                official.call_llm = adapter.complete
+
+                class Agent(official.MinimalReactAgent):
+                    def prompt_messages(self):
+                        return prompt_to_messages(build_prompt(self.task, skills, condition))
+
+                agent = Agent(world.task)
+                journal.append("initial_state", **result)
+                output = None
+                for step in range(a["max_steps"]):
+                    code = agent.next_code_block(output)
+                    # Observe Python syntax; pass the original output to world.execute unchanged.
+                    try:
+                        ast.parse(code)
+                        result["valid_code_steps"] += 1
+                        syntax_ok = True
+                    except SyntaxError:
+                        result["syntax_error_steps"] += 1
+                        syntax_ok = False
+                    result["num_steps"] += 1
+                    journal.append("environment_start", step=step + 1, code=code,
+                                   syntax_ok=syntax_ok)
+                    output = world.execute(code)
+                    journal.append("environment_end", step=step + 1, output=output)
+                    write_json(run_dir / "progress.json", result)
+                    if world.task_completed():
+                        break
         # Official evaluator reloads the on-disk output; no ground truth in agent process input.
         tracker = evaluate_task(task_id=args.task_id, experiment_name=experiment_name,
                                 suppress_errors=True, save_report=True)

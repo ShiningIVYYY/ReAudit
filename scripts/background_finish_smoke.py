@@ -117,6 +117,7 @@ def owned_worker(run_id):
 
 
 def main(run_id):
+    global STATUS
     signal.signal(signal.SIGHUP, signal.SIG_IGN)
     if not re.fullmatch(r"run_\d{8}T\d{6}_[a-f0-9]{32}", run_id):
         raise ValueError("Invalid run ID.")
@@ -124,6 +125,12 @@ def main(run_id):
         fcntl.flock(once, fcntl.LOCK_EX | fcntl.LOCK_NB)
         run_dir = ROOT / "runs/traces" / run_id
         config = load_config(run_dir / "config.json")
+        is_full = config["agent"]["implementation"] == "official_full_react"
+        report_file = "full_react_pilot.md" if is_full else "smoke_report.md"
+        checks_file = "full_react_pilot_checks.json" if is_full else "smoke_checks.json"
+        if is_full:
+            STATUS = ROOT / "tmp/background_full_react_pilot_status.json"
+
         status("monitoring_one_existing_run", run_id=run_id, background_pid=os.getpid())
         start = datetime.strptime(run_id.split("_")[1], "%Y%m%dT%H%M%S") \
             .replace(tzinfo=timezone.utc).timestamp()
@@ -205,10 +212,11 @@ def main(run_id):
             "trace_path": row["trace_path"],
             "cost_recovery_needed": (run_dir / "recovery.json").exists(),
         }
-        write_json(ROOT / "reports/evidence/smoke_checks.json", evidence)
+        write_json(ROOT / "reports/evidence" / checks_file, evidence)
         value = lambda key: row.get(key) if row.get(key) not in ("", None) else "未验证/未知"
         text = [
             "# Qwen2.5-7B single-run smoke", "",
+            f"- Agent: {config['agent']['implementation']}; configuration: per-run snapshot.",
             f"- run_id：{run_id}",
             f"- task_id：{row['task_id']}（官方 train，固定清单第一个任务）",
             f"- status：{value('status')}；failure_type：{value('failure_type')}；官方 TGC：{value('score')}；SGC：单次执行不定义。",
@@ -219,13 +227,13 @@ def main(run_id):
             f"- GPU：物理卡 {config['inference']['gpu_indices']}，RTX 4090；采样显存峰值 {evidence['gpu_memory_peak_mib']} MiB；串行、单并发。",
             f"- 初始指纹与两次独立 reset 一致：{evidence['initial_state_matches_both_resets']}；完整输入哈希一致：{evidence['full_input_hash_matches']}。",
             f"- 重读官方评分退出码：{rescore['returncode']}；评分过程不调用模型。汇总见 evidence/smoke_checks.json；原始评分明细只保存在 git 忽略的本地轨迹中。",
-            "- 只运行了这一个完整执行；其余 7 个任务未运行，8×2 与其他模型未开始；不能由 1 次试跑估计总体成功率。",
-            "- 没有修改官方 agent 输出解析、没有剥围栏或修复模型代码。具体格式问题以逐步原文和官方执行返回为证。",
+            "- 当前 agent 配置只试跑这 1 次；旧 minimal 的 3 次单独保留，不混入新版基线；不能由单次试跑估计总体成功率。",
+            "- 官方 agent 解析规则保持原文；完整版使用其自带代码块提取，minimal 直接执行原文。没有自定义修复模型输出。",
             "- 模型服务已收到本项目限定的停止信号；需结合 service_stop.json 和进程状态确认释放。",
             f"- 全轨迹：{row['trace_path']}（服务器本地、git 忽略）；小体积结果：runs/runs.csv。",
             "", "后台范围到此结束；没有自动扩大实验规模。下一步等待用户确认。",
         ]
-        (ROOT / "reports/smoke_report.md").write_text("\n".join(text) + "\n")
+        (ROOT / "reports" / report_file).write_text("\n".join(text) + "\n")
         milestone = ROOT / "reports/milestone_report.md"
         content = milestone.read_text()
         content = content.replace(
@@ -236,11 +244,20 @@ def main(run_id):
             "本次只完成 1 个完整执行，不能估计总体成功率或典型成本。")
         content = content.replace("尚未在此报告生成时开始模型完整执行。",
                                   "单次模型执行现已结束，详见结果。")
+        if is_full:
+            content += (
+                "\n## Approved official full-ReAct pilot\n\n"
+                + f"Agent=official_full_react; run_id={run_id}; "
+                + f"status={row['status']}; failure_type={row['failure_type']}; score={value('score')}. "
+                + "The old minimal queue was stopped at 3 executions on user selection; all original costs/results remain. "
+                + "This is a distinct agent signature, not a retry or a continuation of the same 16-run baseline. "
+                + "See full_react_pilot.md and evidence/full_react_pilot_checks.json. "
+                + "Only one full-ReAct GPU execution was authorized and performed; stop for user confirmation.\n")
         milestone.write_text(content)
         # Scoped staging; runtime/traces/tmp are excluded.
         git_commands = [
             ["git", "add", "scripts/background_finish_smoke.py", "reports/milestone_report.md",
-             "reports/smoke_report.md", "reports/evidence/smoke_checks.json", "runs/runs.csv"],
+             str(Path("reports") / report_file), str(Path("reports/evidence") / checks_file), "runs/runs.csv"],
             ["git", "status"],
             ["git", "diff", "--cached", "--stat"],
         ]
@@ -276,7 +293,7 @@ def main(run_id):
         status("finished" if synced else "sync_unverified", run_id=run_id,
                commit=head, remote_synced=synced,
                result_status=row["status"], failure_type=row["failure_type"],
-               report="reports/smoke_report.md", next_step="Wait for user confirmation.")
+               report=str(Path("reports") / report_file), next_step="Wait for user confirmation.")
 
 
 if __name__ == "__main__":

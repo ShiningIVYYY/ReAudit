@@ -1,0 +1,150 @@
+{
+  "appworld_commit": "66ad8099e12188ece0d3fe45e661dbc01880813b",
+  "recoma_version": "0.0.4",
+  "recoma_wheel_sha256": "c7bf72e8520c8432bd0ec608cf56742545e57c8d92e25377c13443e326db5de8",
+  "files": [
+    {
+      "path": "src/recoma/__init__.py",
+      "source": "recoma-0.0.4.whl:recoma/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "unchanged": true
+    },
+    {
+      "path": "src/recoma/datasets/reader.py",
+      "source": "recoma-0.0.4.whl:recoma/datasets/reader.py",
+      "sha256": "5c5cc416dd13c9bfab66ba5780c94e844295e98ad27b34068bf8b2050bda567b",
+      "unchanged": true
+    },
+    {
+      "path": "src/recoma/models/core/__init__.py",
+      "source": "recoma-0.0.4.whl:recoma/models/core/__init__.py",
+      "sha256": "941f23dfc6208237da6f53f034e6aa3e25381d4f87212a47ad690c251daddf68",
+      "unchanged": true
+    },
+    {
+      "path": "src/recoma/models/core/base_model.py",
+      "source": "recoma-0.0.4.whl:recoma/models/core/base_model.py",
+      "sha256": "1af0b069ae44ca914af89ab19172980f19196d9c33fcdfa3f93a11e546e65ecb",
+      "unchanged": true
+    },
+    {
+      "path": "src/recoma/models/core/base_react_controller.py",
+      "source": "recoma-0.0.4.whl:recoma/models/core/base_react_controller.py",
+      "sha256": "3ea0d0c9c9934feb9d6f887683d15e2b899189976df4458590609d01fb9d50ce",
+      "unchanged": true
+    },
+    {
+      "path": "src/recoma/models/core/generator.py",
+      "source": "recoma-0.0.4.whl:recoma/models/core/generator.py",
+      "sha256": "2d824bddf454003dec505ab5f8457250a037c4189a26bbab32433e79d836695e",
+      "unchanged": true
+    },
+    {
+      "path": "src/recoma/models/core/prompted_lm_model.py",
+      "source": "recoma-0.0.4.whl:recoma/models/core/prompted_lm_model.py",
+      "sha256": "bb7a8656a5961f658886842e6e17623fde30efde20a5dc4e7fb7ee993a9ac64d",
+      "unchanged": true
+    },
+    {
+      "path": "src/recoma/models/core/utility_models.py",
+      "source": "recoma-0.0.4.whl:recoma/models/core/utility_models.py",
+      "sha256": "82ba11a89e87435b58fd42cdb1c62b7443cb7cf7457e06ba78e8afa3ac85e847",
+      "unchanged": true
+    },
+    {
+      "path": "src/recoma/search/__init__.py",
+      "source": "recoma-0.0.4.whl:recoma/search/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "unchanged": true
+    },
+    {
+      "path": "src/recoma/search/answerfromstate.py",
+      "source": "recoma-0.0.4.whl:recoma/search/answerfromstate.py",
+      "sha256": "fc7fd1edc25485258d9a842abbb576b8af50ec8b7d8b9dda9f2dcbd8bbb02057",
+      "unchanged": true
+    },
+    {
+      "path": "src/recoma/search/controller.py",
+      "source": "recoma-0.0.4.whl:recoma/search/controller.py",
+      "sha256": "9e6fcb9e6261c73cd4b0fd59ca6607c6609520e10c69c01a2ef23f84b7a85d44",
+      "unchanged": true
+    },
+    {
+      "path": "src/recoma/search/early_stopping.py",
+      "source": "recoma-0.0.4.whl:recoma/search/early_stopping.py",
+      "sha256": "9f06bbb8d1ac14e9496ffa7ecf2c21228852961b56801f9ba8e5e921a7a63598",
+      "unchanged": true
+    },
+    {
+      "path": "src/recoma/search/search.py",
+      "source": "recoma-0.0.4.whl:recoma/search/search.py",
+      "sha256": "daec278aa4af3ffd227929c22c332abc0e4ec02792e3222ebb49e5c421248b6c",
+      "unchanged": true
+    },
+    {
+      "path": "src/recoma/search/state.py",
+      "source": "recoma-0.0.4.whl:recoma/search/state.py",
+      "sha256": "8d0fbac7ca249169330d4b16daf202204d880a51a35d1989e0b3e2a802d7addd",
+      "unchanged": true
+    },
+    {
+      "path": "src/recoma/utils/class_utils.py",
+      "source": "recoma-0.0.4.whl:recoma/utils/class_utils.py",
+      "sha256": "42ae8ccfd52af245af2275d16d9c43884deec77f575a5e3ffcadc824fe33accb",
+      "unchanged": true
+    },
+    {
+      "path": "src/recoma/models/__init__.py",
+      "unchanged": false,
+      "change": "Package initialization only; skip unrelated providers/datasets."
+    },
+    {
+      "path": "src/recoma/datasets/__init__.py",
+      "unchanged": false,
+      "change": "Package initialization only; skip unrelated providers/datasets."
+    },
+    {
+      "path": "src/recoma/utils/__init__.py",
+      "unchanged": false,
+      "change": "Package initialization only; skip unrelated providers/datasets."
+    },
+    {
+      "path": "src/experiments/code/recoma/react_controller.py",
+      "source_commit": "66ad8099e12188ece0d3fe45e661dbc01880813b",
+      "sha256": "248003d4cef1ad093ee172d1c73ba6988c597b3ea030039028ba92430a930db1",
+      "unchanged": true
+    },
+    {
+      "path": "src/experiments/code/recoma/appworld_prompted_lm.py",
+      "source_commit": "66ad8099e12188ece0d3fe45e661dbc01880813b",
+      "sha256": "cfb034eab13ed2f94ed1d34cb6369d22298ffa088d10bccccb902751c1971fa1",
+      "unchanged": true
+    },
+    {
+      "path": "src/experiments/code/recoma/appworld_env_models.py",
+      "source_commit": "66ad8099e12188ece0d3fe45e661dbc01880813b",
+      "sha256": "2045e73b737e059180f997cfe0daee289d4d6ede34943786b2764fad9ab578a3",
+      "unchanged": true
+    },
+    {
+      "path": "src/experiments/code/recoma/singleton_appworld.py",
+      "source_commit": "66ad8099e12188ece0d3fe45e661dbc01880813b",
+      "sha256": "79fcda8ffbc1b4a7936bceeae02833b3af2f827bc45583e9b6c9fe68cbc0adff",
+      "unchanged": true
+    },
+    {
+      "path": "src/experiments/code/recoma/appworld_reader.py",
+      "source_commit": "66ad8099e12188ece0d3fe45e661dbc01880813b",
+      "sha256": "038a4c7cd258d4cc096f5c36b4f628dd0ca67648e94c5c103f037c33251509e9",
+      "unchanged": true
+    },
+    {
+      "path": "src/reaudit/official_react_prompt.txt",
+      "source_commit": "66ad8099e12188ece0d3fe45e661dbc01880813b",
+      "sha256": "d1cd7b7edcc12c2678b341bf00c8a8654d67f2169b523ac9b3f4cabb95b4df10",
+      "unchanged": true
+    }
+  ],
+  "unavailable_unused_dependency": "PyPI resolver could not find litellm==1.37.19; no mirror or alternate package used.",
+  "runtime_scope": "Official core/search imported verbatim; only package imports skip unused provider/UI modules."
+}

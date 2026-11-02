@@ -1,5 +1,7 @@
 """Full initial input; skill bookkeeping never enters model-visible text."""
 import re
+import json
+from pathlib import Path
 from jinja2 import Template
 from .official_minimal_agent import PROMPT_TEMPLATE
 
@@ -27,8 +29,17 @@ def selected_skills(skills, condition):
 
 def build_prompt(task, skills, condition):
     """Return complete UTF-8 role-tagged input, without version metadata."""
-    prompt = Template(PROMPT_TEMPLATE.lstrip()).render(
-        {"supervisor": task.supervisor, "instruction": task.instruction})
+    profile = condition.get("agent_implementation") if isinstance(condition, dict) else None
+    if profile == "official_full_react":
+        template = Path(__file__).with_name("official_react_prompt.txt").read_text()
+        prompt = Template(template).render({
+            "main_user": task.supervisor,
+            "app_descriptions": json.dumps(
+                [{"name": k, "description": v} for k, v in task.app_descriptions.items()], indent=1),
+            "input_str": task.instruction + "\n\n" + condition.get("action_prefix", "")})
+    else:
+        prompt = Template(PROMPT_TEMPLATE.lstrip()).render(
+            {"supervisor": task.supervisor, "instruction": task.instruction})
     active = selected_skills(skills, condition)
     if active:
         prompt += "\n\nAdditional skills:\n\n" + "\n\n".join(s["text"] for s in active)

@@ -1,0 +1,5 @@
+# Full official ReAct runtime: original base environment plus lightweight core dependencies.
+# Recoma 0.0.4 core/search is vendored verbatim; unused provider/UI modules are not loaded.
+-r requirements.txt
+treelib==1.8.0
+six==1.17.0

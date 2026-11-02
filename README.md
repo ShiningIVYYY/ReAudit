@@ -103,3 +103,19 @@ origin fetch URL 保持 HTTPS，push URL 为 git@github.com:ShiningIVYYY/ReAudit
 异常执行如果已保存有效环境输出，会另用官方评测程序读取该状态，将原先未知的 TGC 补充为实际评分；保留原始 status/failure_type，不改记 task_failed。附加评分不调用模型，耗时与证据保存在本地 score_enrichment.json，原始轨迹不变。CSV 为派生汇总，补充评分不新增 run_id 或重复计费。
 
 16 个槽位结束后额外做一次 0.05 秒的完整执行 watchdog 测试，配置单独保存在 config/timeout_check.json；该行因超时配置签名不同而排除在 16 次基线统计之外。模型服务会停止并记录资源释放，结果只导出摘要、哈希与计数，原始评测明细不进入 git。后台状态：runtime/qwen25-batch-status.json；日志：runtime/qwen25-batch.log。可在 runtime/pause-qwen25-batch.json 创建暂停请求，脚本在当前完整执行结束后停止，不打断当前任务。
+
+## 已批准的官方完整版 ReAct 单次试跑
+
+用户选择先试 official_full_react；旧 minimal 队列已停在 3 次，保留全部成本和失败。
+新版模型、任务、seed、temperature、max_tokens、50 步和超时规则保持固定，配置单独保存：
+
+    runtime/agent-venv/bin/python -m pip --isolated install --index-url https://pypi.org/simple --cache-dir "$PWD/tmp/pip-cache" -r requirements-full-react.txt
+    runtime/agent-venv/bin/python -m pytest -q tests/test_full_react.py
+    runtime/agent-venv/bin/python scripts/serve_model.py start --config config/full_react_pilot.json
+    runtime/agent-venv/bin/python scripts/run_experiment.py --task-id e3d6c94_3 --repeat-index 0 --config config/full_react_pilot.json
+
+完整版实际执行官方 AppworldReactController、AppworldPromptedLMModel、BestFirstSearch、AppworldEnvironmentModel 与 AppworldAnswerer 的原始方法。模型 backend 替换为现有记录 usage 的 OpenAI 兼容适配层；环境初始化读 config，外层仅增加日志和技能文本接口。没有改 parser 或官方评分。
+Recoma 0.0.4 在当前 PyPI 锁定一个不可得的旧 LiteLLM 版本，故 vendor 其实际 core/search 源码，只调整包入口以跳过未使用的 provider/UI 模块；新增 treelib/six 共约 42 KB，无新增权重或 GPU 依赖。方法原文和哈希见 full_react_provenance.json，CPU mock 验证见 full_react_mock.json。
+官方完整 prompt 只使用 main_user、app_descriptions、input_str；虽然官方实例加载 train ground truth 以评分，其 required_apis/gold_answer 不在模板里。源码变量检查与首个实际输入哈希比较均为硬检查。
+官方默认的 24000 字符 prompt 裁剪和 100000 字符历史限额写入 full_react 配置。模型调用上限和环境执行上限均为 50；这些上限通过官方 early-stopping 类执行。
+该 agent 和旧 minimal 不合并统计。试跑结果保存到 reports/full_react_pilot.md；之后须用户确认才跑新版 16 次或别的模型。
