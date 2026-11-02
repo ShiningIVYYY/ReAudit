@@ -51,3 +51,8 @@ runs/*
 *.log
 *.log.*
 .DS_Store
+
+# Recoma Python source is code, not model weights. Keep weight/binary rules active.
+!src/recoma/models/
+!src/recoma/models/**/
+!src/recoma/models/**/*.py
