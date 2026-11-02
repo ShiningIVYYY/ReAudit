@@ -1,0 +1,10 @@
+{
+  "verified_at_utc": "2026-11-02T21:13:06.529630+00:00",
+  "service_pid": 3886912,
+  "service_pid_exists": false,
+  "gpu_csv": "index, uuid, memory.used [MiB], utilization.gpu [%]\n7, GPU-3f53fb52-ef85-176b-8607-e21dc9d9d4b2, 3 MiB, 0 %\n",
+  "service_launch_unix": 1793652028.278095,
+  "service_stop_record_unix": 1793653795.355654,
+  "timing_definition": "Approximate launch-to-stop-record wall time, includes model loading, preparation and idle wait; not precise GPU-active duration and not per-execution latency.",
+  "service_launch_to_stop_record_seconds": 1767.0775589942932
+}
