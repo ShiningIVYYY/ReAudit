@@ -92,7 +92,7 @@ def main():
         result["score"] = int(tracker.success)
         if tracker.success:
             result.update(status="completed", failure_type=None)
-        elif result["num_steps"] and result["valid_code_steps"] == 0:
+        elif (result["num_steps"] or result.get("num_model_calls", 0)) and result["valid_code_steps"] == 0:
             result.update(status="error", failure_type="parse_error")
         else:
             result.update(status="completed", failure_type="task_failed")

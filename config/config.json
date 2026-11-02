@@ -61,13 +61,27 @@
     "repetition_penalty": 1.05
   },
   "agent": {
-    "implementation": "official_minimal_react",
+    "implementation": "official_full_react",
     "max_steps": 50,
     "request_timeout_seconds": 60,
     "code_timeout_seconds": 30,
     "run_timeout_seconds": 600,
     "termination_grace_seconds": 5,
-    "environment_seed": 123
+    "environment_seed": 123,
+    "full_react": {
+      "source_commit": "66ad8099e12188ece0d3fe45e661dbc01880813b",
+      "recoma_version": "0.0.4",
+      "runtime_mode": "vendored_core",
+      "add_roles": true,
+      "max_history_characters": 100000,
+      "max_prompt_characters": 24000,
+      "action_prefix": "",
+      "observation_prefix": "Output:\n",
+      "end_of_query": "[EOQ]",
+      "ignore_multiple_calls": true,
+      "max_search_iterations": 254,
+      "max_search_depth": 202
+    }
   },
   "experiment": {
     "condition": {
@@ -78,7 +92,8 @@
     "sampling_seeds": [
       123,
       124
-    ]
+    ],
+    "purpose": "baseline_full_react"
   },
   "task_selection": {
     "seed": 1729,

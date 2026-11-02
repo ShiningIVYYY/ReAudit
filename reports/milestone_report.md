@@ -57,3 +57,7 @@ vLLM=0.11.0，PyTorch=2.8.0/CUDA12.8，Transformers=4.57.3；BF16、不量化；
 - 新增的异常后官方评分只补充实际 TGC，原始 status/failure_type 和请求/响应轨迹不改；评分错误留未知，不猜成0。
 
 当前停在“官方完整版单次试跑”检查点。需用户确认是否采用该 agent 统一三个模型，并先完成 Qwen2.5-7B 的新版8×2基线。本次失败可占新版一个固定重复槽位，不重新计费。其他模型部署/大文件下载须另行确认。
+
+## Approved full baseline continuation
+
+用户已确认继续 Qwen2.5-7B 新版8×2。根配置切换为已试跑的 official_full_react，模型/解码/50步/600秒上限/seed未变；仅 purpose 元数据改为 baseline_full_react。续跑应复用新版已有 timeout 试跑，新增15次，不重试失败；完成后受控0.05秒超时检查单列，停止并释放GPU、复读官方评分、提交推送，等待下一模型确认。
