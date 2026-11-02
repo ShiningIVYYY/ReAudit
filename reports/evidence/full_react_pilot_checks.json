@@ -13,7 +13,7 @@
     "environment_snapshot_fingerprint": "a0a5c507fcceee58d5964b9f43a9c878525ee5be5f18d4fc6d0b0271d31ce722",
     "full_input_hash": "0f698153689b9ccc471443af48516095b0583307f3d99347e3b392194e57e1e4",
     "sampling_seed": "123",
-    "score": "",
+    "score": 0,
     "sgc": "",
     "prompt_tokens": "",
     "completion_tokens": "",
@@ -68,5 +68,21 @@
     "output": "Sent SIGTERM only to this project's recorded service process group.\n"
   },
   "trace_path": "runs/traces/run_20261102T222456_8c8bccbc839842cc9d44895dbb00875a",
-  "cost_recovery_needed": false
+  "cost_recovery_needed": false,
+  "official_score_summary": {
+    "success": false,
+    "difficulty": 1,
+    "num_tests": 9
+  },
+  "score_enrichment_model_calls": 0,
+  "score_enrichment_trace": "runs/traces/run_20261102T222456_8c8bccbc839842cc9d44895dbb00875a/score_enrichment.json",
+  "official_score_repeat_matches": true,
+  "service_release_verification": {
+    "verified_at_utc": "2026-11-02T22:39:22.210907+00:00",
+    "service_pid_exists": false,
+    "gpu_csv": "index, uuid, memory.used [MiB], utilization.gpu [%]\n7, GPU-3f53fb52-ef85-176b-8607-e21dc9d9d4b2, 3 MiB, 0 %\n",
+    "service_launch_unix": 1793658272.1061246,
+    "service_stop_record_unix": 1793658897.409588,
+    "launch_to_stop_record_seconds": 625.3034634590149
+  }
 }

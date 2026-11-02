@@ -1,0 +1,62 @@
+[
+  {
+    "run_id": "run_20261102T204402_a2ede390b641484bb7412ff0cffcb191",
+    "task_id": "e3d6c94_3",
+    "sampling_seed": "123",
+    "score": "0",
+    "status": "error",
+    "failure_type": "context_overflow",
+    "config_sha256": "c87b75b86e8c5cd4bfc8fa7463463af5990ab4cf5ac02ccb7254bc1f517de69e",
+    "git_commit": "4ada0eb68fef4a2994636037fc8f3c34166b03f3",
+    "latency_seconds": "532.951364217326",
+    "usage_complete": "False",
+    "known_prompt_tokens": "586846",
+    "known_completion_tokens": "28617",
+    "agent_id": "official_minimal_react"
+  },
+  {
+    "run_id": "run_20261102T213053_fbb7e8c955fb4d25917e98d554cbe4df",
+    "task_id": "e3d6c94_3",
+    "sampling_seed": "124",
+    "score": "0",
+    "status": "error",
+    "failure_type": "context_overflow",
+    "config_sha256": "7eee5726f3939aa8cea053b3b32082d3307950462b3e121219392faf4e6c3f43",
+    "git_commit": "c5494fd66561dfbf870e20120d94edff2013eceb",
+    "latency_seconds": "547.4289374668151",
+    "usage_complete": "False",
+    "known_prompt_tokens": "486897",
+    "known_completion_tokens": "29253",
+    "agent_id": "official_minimal_react"
+  },
+  {
+    "run_id": "run_20261102T214003_d5e4489aaa1543a2a2380b28d720de6d",
+    "task_id": "229360a_3",
+    "sampling_seed": "123",
+    "score": "0",
+    "status": "completed",
+    "failure_type": "task_failed",
+    "config_sha256": "7eee5726f3939aa8cea053b3b32082d3307950462b3e121219392faf4e6c3f43",
+    "git_commit": "ca0116e5d2a97b25926a2746ca090d2864a23334",
+    "latency_seconds": "423.0927357971668",
+    "usage_complete": "True",
+    "known_prompt_tokens": "728644",
+    "known_completion_tokens": "22621",
+    "agent_id": "official_minimal_react"
+  },
+  {
+    "run_id": "run_20261102T222456_8c8bccbc839842cc9d44895dbb00875a",
+    "task_id": "e3d6c94_3",
+    "sampling_seed": "123",
+    "score": "0",
+    "status": "error",
+    "failure_type": "timeout",
+    "config_sha256": "6a701f107006acbe98d0c74590404ab71ab6fe8061dc758e2a18a03771d400ad",
+    "git_commit": "3dd2729511ca8297b365bb2d85028d1873c35f13",
+    "latency_seconds": "600.1158854402602",
+    "usage_complete": "False",
+    "known_prompt_tokens": "260240",
+    "known_completion_tokens": "32378",
+    "agent_id": "official_full_react"
+  }
+]

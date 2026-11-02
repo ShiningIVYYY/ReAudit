@@ -1,5 +1,7 @@
 # ReAudit
 
+当前状态：官方完整版 ReAct 已完成 1 次真实试跑（timeout，官方保存状态 TGC=0，0/49语法错误）；旧 minimal 的3次仅保留作诊断。新版16次和三模型统一采用该agent尚待确认。运行新版须显式使用 config/full_react_pilot.json；根 config.json 是已停止的旧诊断配置。见 reports/milestone_report.md 和 reports/full_react_pilot.md。
+
 AppWorld train 上的技能库消融实验。当前检查点：用户已确认继续 Qwen2.5-7B 固定基线的 8 任务 × 2 次。保持已固定的 official_minimal_react；是否换用官方完整版另行询问，不按未提交的选项擅自切换。其他模型和后续阶段不自动开始。
 
 ## 固定环境与来源
@@ -119,3 +121,5 @@ Recoma 0.0.4 在当前 PyPI 锁定一个不可得的旧 LiteLLM 版本，故 ven
 官方完整 prompt 只使用 main_user、app_descriptions、input_str；虽然官方实例加载 train ground truth 以评分，其 required_apis/gold_answer 不在模板里。源码变量检查与首个实际输入哈希比较均为硬检查。
 官方默认的 24000 字符 prompt 裁剪和 100000 字符历史限额写入 full_react 配置。模型调用上限和环境执行上限均为 50；这些上限通过官方 early-stopping 类执行。
 该 agent 和旧 minimal 不合并统计。试跑结果保存到 reports/full_react_pilot.md；之后须用户确认才跑新版 16 次或别的模型。
+
+错误后评分：run_experiment.py 现在会对存在有效保存状态、但原先 score 未知的异常执行自动调用官方评分程序补充 TGC。status/failure_type 保持原始异常，不把 timeout 改成 task_failed；评分失败时继续留空，不猜测为零。原始评分明细只保存在本地忽略的轨迹中。
