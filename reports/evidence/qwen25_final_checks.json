@@ -1,0 +1,36 @@
+{
+  "checks": [
+    {
+      "command": [
+        "/data1/shn/ReAudit/runtime/agent-venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "tests"
+      ],
+      "returncode": 0,
+      "output": "....................                                                     [100%]\n=============================== warnings summary ===============================\nsrc/recoma/models/core/utility_models.py:50\n  /data1/shn/ReAudit/src/recoma/models/core/utility_models.py:50: SyntaxWarning: invalid escape sequence '\\['\n    def __init__(self, regex: str = \"\\[([^\\]]+)\\] (.*)\", **kwargs):\n\nruntime/agent-venv/lib/python3.12/site-packages/polyfactory/factories/base.py:246\n  /data1/shn/ReAudit/runtime/agent-venv/lib/python3.12/site-packages/polyfactory/factories/base.py:246: DeprecationWarning: Use of deprecated default '__check_model__'. Deprecated in polyfactory v2.22.0. This default will be removed in the next major version. Use 'set to `False` explicitly to keep existing behaviour' instead\n    warn_deprecation(\n\nruntime/agent-venv/lib/python3.12/site-packages/starlette/testclient.py:41\n  /data1/shn/ReAudit/runtime/agent-venv/lib/python3.12/site-packages/starlette/testclient.py:41: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.\n    [], typing.ContextManager[anyio.abc.BlockingPortal]\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n20 passed, 3 warnings in 1.50s\n"
+    },
+    {
+      "command": [
+        "/data1/shn/ReAudit/runtime/agent-venv/bin/python",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "returncode": 0,
+      "output": "No broken requirements found.\n"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "returncode": 0,
+      "output": ""
+    }
+  ],
+  "timestamp_unix": 1793670979.1022027,
+  "model_calls": 0
+}

@@ -1,8 +1,8 @@
 # ReAudit
 
-当前状态：用户已确认采用官方完整版 ReAct，继续 Qwen2.5-7B 的新版8×2基线。根 config/config.json 现为已批准的完整版配置；原有超时试跑计入16次，旧minimal三次仅作诊断。其他模型不自动开始。
+当前状态：Qwen2.5-7B 的官方完整版 ReAct 8×2 基线已完成，TGC 0/16（15 task_failed、1 timeout）；另有3次旧 minimal 诊断和1次受控超时，总账20次，分开统计。GPU已释放。报告见 reports/qwen25_baseline.md 和 reports/milestone_report.md。其他模型和后续阶段等待用户确认。
 
-AppWorld train 上的技能库消融平台。当前正式边界为上方所述的完整版单次试跑；旧 minimal 队列已停止。
+AppWorld train 上的技能库消融平台；config/config.json 为已批准的正式 full-ReAct 配置。
 
 ## 固定环境与来源
 
@@ -76,7 +76,7 @@ APPWORLD_CACHE 必须在 install 前设置，否则官方安装器会把包测�
     runtime/agent-venv/bin/python scripts/rescore_run.py RUN_ID
 
 一次执行=从新 AppWorld 初始世界开始，到 task_completed、步数上限或异常/超时。父进程在整个执行期间独占项目执行锁，禁止同时跑多个完整执行；每次 worker 为新进程。重复 seed 从 config.experiment.sampling_seeds 取值，不允许从 CLI 暗改解码配置。
-官方 agent 原样把模型文字传给 world.execute：不剥围栏、不修复代码；语法检查只记录诊断，仍让官方环境处理。评分单独调用官方 evaluate_task，重读保存的官方 DB，不修改评分逻辑。不给模型任何 ground truth。
+当前 full-ReAct 使用官方 parser 提取代码块后传给 world.execute，不额外修复；旧 minimal 诊断保留其原始直接执行规则。代码；语法检查只记录诊断，仍让官方环境处理。评分单独调用官方 evaluate_task，重读保存的官方 DB，不修改评分逻辑。不给模型任何 ground truth。
 build_prompt(task, skills, condition) 返回完整 role-tagged UTF-8 文本；no_skill 与官方 prompt_messages 的消息内容逐字一致。full_input_hash 为该文本 SHA256；每次调用还保存完整 OpenAI messages/参数和其 canonical JSON SHA256。服务端 chat template 由固定模型 revision 决定；未声称 full_input_hash 是 chat-template 渲染后的 token ID 哈希。
 技能版本/移除条件只写日志；模型输入只添加所选技能文本。移除 B 不替换其他文本。
 
@@ -104,9 +104,9 @@ origin fetch URL 保持 HTTPS，push URL 为 git@github.com:ShiningIVYYY/ReAudit
 
 异常执行如果已保存有效环境输出，会另用官方评测程序读取该状态，将原先未知的 TGC 补充为实际评分；保留原始 status/failure_type，不改记 task_failed。附加评分不调用模型，耗时与证据保存在本地 score_enrichment.json，原始轨迹不变。CSV 为派生汇总，补充评分不新增 run_id 或重复计费。
 
-16 个槽位结束后额外做一次 0.05 秒的完整执行 watchdog 测试，配置单独保存在 config/timeout_check.json；该行因超时配置签名不同而排除在 16 次基线统计之外。模型服务会停止并记录资源释放，结果只导出摘要、哈希与计数，原始评测明细不进入 git。后台状态：runtime/qwen25-batch-status.json；日志：runtime/qwen25-batch.log。可在 runtime/pause-qwen25-batch.json 创建暂停请求，脚本在当前完整执行结束后停止，不打断当前任务。
+16 个槽位结束后额外做一次 0.05 秒的完整执行 watchdog 测试，配置单独保存在 config/timeout_check.json；该行因超时配置签名不同而排除在 16 次基线统计之外。模型服务会停止并记录资源释放，结果只导出摘要、哈希与计数，原始评测明细不进入 git。后台状态：runtime/qwen25-batch-status.json；本次日志：runtime/qwen25-full-baseline.log。可在 runtime/pause-qwen25-batch.json 创建暂停请求，脚本在当前完整执行结束后停止，不打断当前任务。
 
-## 已批准的官方完整版 ReAct 单次试跑
+## 官方完整版 ReAct 与历史试跑复现
 
 用户选择先试 official_full_react；旧 minimal 队列已停在 3 次，保留全部成本和失败。
 新版模型、任务、seed、temperature、max_tokens、50 步和超时规则保持固定，配置单独保存：
@@ -120,8 +120,8 @@ origin fetch URL 保持 HTTPS，push URL 为 git@github.com:ShiningIVYYY/ReAudit
 Recoma 0.0.4 在当前 PyPI 锁定一个不可得的旧 LiteLLM 版本，故 vendor 其实际 core/search 源码，只调整包入口以跳过未使用的 provider/UI 模块；新增 treelib/six 共约 42 KB，无新增权重或 GPU 依赖。方法原文和哈希见 full_react_provenance.json，CPU mock 验证见 full_react_mock.json。
 官方完整 prompt 只使用 main_user、app_descriptions、input_str；虽然官方实例加载 train ground truth 以评分，其 required_apis/gold_answer 不在模板里。源码变量检查与首个实际输入哈希比较均为硬检查。
 官方默认的 24000 字符 prompt 裁剪和 100000 字符历史限额写入 full_react 配置。模型调用上限和环境执行上限均为 50；这些上限通过官方 early-stopping 类执行。
-该 agent 和旧 minimal 不合并统计。试跑结果保存到 reports/full_react_pilot.md；之后须用户确认才跑新版 16 次或别的模型。
+该 agent 和旧 minimal 不合并统计。历史试跑结果在 reports/full_react_pilot.md；用户随后已批准并完成新版16次，结果在 reports/qwen25_baseline.md。其他模型仍须确认。
 
 错误后评分：run_experiment.py 现在会对存在有效保存状态、但原先 score 未知的异常执行自动调用官方评分程序补充 TGC。status/failure_type 保持原始异常，不把 timeout 改成 task_failed；评分失败时继续留空，不猜测为零。原始评分明细只保存在本地忽略的轨迹中。
 
-本轮已批准继续新版 Qwen2.5-7B 16次；run_baseline_batch.py 会按完整 agent/model/config 签名复用1次已完成试跑，只新增15次，并在结束后额外执行受控0.05秒超时检查。旧minimal结果不混入。初始状态、输入哈希、离线官方评分和run_id去重均自动复核。
+已完成的新版 Qwen2.5-7B 16次：run_baseline_batch.py 按完整 agent/model/config 签名复用了1次已完成试跑，新增15次，并在结束后执行了受控0.05秒超时检查。再次运行会复用失败结果，不自动重跑。旧minimal结果不混入。初始状态、输入哈希、离线官方评分和run_id去重均自动复核。

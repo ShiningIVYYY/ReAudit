@@ -84,3 +84,7 @@ uvicorn==0.27.1
 uvloop==0.21.0
 wcwidth==0.9.4
 xxhash==3.8.2
+
+treelib==1.8.0
+
+six==1.17.0

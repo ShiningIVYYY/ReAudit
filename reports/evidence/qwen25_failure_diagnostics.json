@@ -1,0 +1,477 @@
+{
+  "run_ids": [
+    "run_20261102T222456_8c8bccbc839842cc9d44895dbb00875a",
+    "run_20261102T230212_736476b8c5d54ea2b7f8073ba1919720",
+    "run_20261102T230707_164682126e1b42478d075a57795b709c",
+    "run_20261102T230749_5cff677387ae42ca8c91973478cee6bd",
+    "run_20261102T230819_a425076cf16145c2afba0216b14093d2",
+    "run_20261102T230852_18e65ad9ad7843929c4fc1c9a6cec9c8",
+    "run_20261102T230909_5039e457977c4009ad38089ada84864a",
+    "run_20261102T230946_7a0643bcd24449bb84d5f8012fbd95df",
+    "run_20261102T231137_c693ecf494eb43d3b20ae8216f3fe78b",
+    "run_20261102T231451_f930d46cde424c7f9cfe0fdfa3be352f",
+    "run_20261102T232100_6a716561bccb451cb385c4e83dbc4db2",
+    "run_20261102T232132_a96809c7496f42c4aaaa4484331449f9",
+    "run_20261102T232244_c0930a27c7a14045be73acdf76e701ef",
+    "run_20261102T232306_f6fb599c7d024d10a9cda0e8e0fe61c8",
+    "run_20261102T232355_3b993ddb647440dd88ea35523749c55d",
+    "run_20261102T232504_017a9f874bd242acb2e475105922ac8b"
+  ],
+  "per_run": [
+    {
+      "run_id": "run_20261102T222456_8c8bccbc839842cc9d44895dbb00875a",
+      "task_id": "e3d6c94_3",
+      "status": "error",
+      "failure_type": "timeout",
+      "event_counts": {
+        "initial_state": 1,
+        "full_prompt": 50,
+        "call_start": 50,
+        "http_response": 49,
+        "call_end": 49,
+        "environment_start": 49,
+        "environment_end": 49
+      },
+      "exception_type_mentions": {
+        "TypeError": 23,
+        "NameError": 1
+      },
+      "finish_reason_counts": {
+        "stop": 37,
+        "length": 12
+      },
+      "max_request_prompt_tokens": 5810,
+      "no_code_extraction_messages": 0,
+      "called_complete_task": false,
+      "trimmed_history_calls": 41,
+      "max_full_prompt_characters": 23986
+    },
+    {
+      "run_id": "run_20261102T230212_736476b8c5d54ea2b7f8073ba1919720",
+      "task_id": "e3d6c94_3",
+      "status": "completed",
+      "failure_type": "task_failed",
+      "event_counts": {
+        "initial_state": 1,
+        "full_prompt": 39,
+        "call_start": 39,
+        "http_response": 39,
+        "call_end": 39,
+        "environment_start": 39,
+        "environment_end": 39,
+        "official_evaluation": 1
+      },
+      "exception_type_mentions": {
+        "TypeError": 9
+      },
+      "finish_reason_counts": {
+        "stop": 39
+      },
+      "max_request_prompt_tokens": 6865,
+      "no_code_extraction_messages": 0,
+      "called_complete_task": true,
+      "trimmed_history_calls": 32,
+      "max_full_prompt_characters": 24000
+    },
+    {
+      "run_id": "run_20261102T230707_164682126e1b42478d075a57795b709c",
+      "task_id": "229360a_3",
+      "status": "completed",
+      "failure_type": "task_failed",
+      "event_counts": {
+        "initial_state": 1,
+        "full_prompt": 10,
+        "call_start": 10,
+        "http_response": 10,
+        "call_end": 10,
+        "environment_start": 10,
+        "environment_end": 10,
+        "official_evaluation": 1
+      },
+      "exception_type_mentions": {},
+      "finish_reason_counts": {
+        "stop": 10
+      },
+      "max_request_prompt_tokens": 6199,
+      "no_code_extraction_messages": 0,
+      "called_complete_task": true,
+      "trimmed_history_calls": 4,
+      "max_full_prompt_characters": 23789
+    },
+    {
+      "run_id": "run_20261102T230749_5cff677387ae42ca8c91973478cee6bd",
+      "task_id": "229360a_3",
+      "status": "completed",
+      "failure_type": "task_failed",
+      "event_counts": {
+        "initial_state": 1,
+        "full_prompt": 8,
+        "call_start": 8,
+        "http_response": 8,
+        "call_end": 8,
+        "environment_start": 8,
+        "environment_end": 8,
+        "official_evaluation": 1
+      },
+      "exception_type_mentions": {
+        "NameError": 1
+      },
+      "finish_reason_counts": {
+        "stop": 8
+      },
+      "max_request_prompt_tokens": 5778,
+      "no_code_extraction_messages": 0,
+      "called_complete_task": true,
+      "trimmed_history_calls": 0,
+      "max_full_prompt_characters": 18872
+    },
+    {
+      "run_id": "run_20261102T230819_a425076cf16145c2afba0216b14093d2",
+      "task_id": "82e2fac_2",
+      "status": "completed",
+      "failure_type": "task_failed",
+      "event_counts": {
+        "initial_state": 1,
+        "full_prompt": 11,
+        "call_start": 11,
+        "http_response": 11,
+        "call_end": 11,
+        "environment_start": 11,
+        "environment_end": 11,
+        "official_evaluation": 1
+      },
+      "exception_type_mentions": {},
+      "finish_reason_counts": {
+        "stop": 11
+      },
+      "max_request_prompt_tokens": 6039,
+      "no_code_extraction_messages": 0,
+      "called_complete_task": true,
+      "trimmed_history_calls": 5,
+      "max_full_prompt_characters": 23981
+    },
+    {
+      "run_id": "run_20261102T230852_18e65ad9ad7843929c4fc1c9a6cec9c8",
+      "task_id": "82e2fac_2",
+      "status": "completed",
+      "failure_type": "task_failed",
+      "event_counts": {
+        "initial_state": 1,
+        "full_prompt": 4,
+        "call_start": 4,
+        "http_response": 4,
+        "call_end": 4,
+        "environment_start": 4,
+        "environment_end": 4,
+        "official_evaluation": 1
+      },
+      "exception_type_mentions": {
+        "NameError": 1
+      },
+      "finish_reason_counts": {
+        "stop": 4
+      },
+      "max_request_prompt_tokens": 3180,
+      "no_code_extraction_messages": 0,
+      "called_complete_task": true,
+      "trimmed_history_calls": 0,
+      "max_full_prompt_characters": 12211
+    },
+    {
+      "run_id": "run_20261102T230909_5039e457977c4009ad38089ada84864a",
+      "task_id": "b7a9ee9_2",
+      "status": "completed",
+      "failure_type": "task_failed",
+      "event_counts": {
+        "initial_state": 1,
+        "full_prompt": 11,
+        "call_start": 11,
+        "http_response": 11,
+        "call_end": 11,
+        "environment_start": 6,
+        "environment_end": 6,
+        "official_evaluation": 1
+      },
+      "exception_type_mentions": {},
+      "finish_reason_counts": {
+        "stop": 11
+      },
+      "max_request_prompt_tokens": 5008,
+      "no_code_extraction_messages": 5,
+      "called_complete_task": true,
+      "trimmed_history_calls": 0,
+      "max_full_prompt_characters": 18016
+    },
+    {
+      "run_id": "run_20261102T230946_7a0643bcd24449bb84d5f8012fbd95df",
+      "task_id": "b7a9ee9_2",
+      "status": "completed",
+      "failure_type": "task_failed",
+      "event_counts": {
+        "initial_state": 1,
+        "full_prompt": 21,
+        "call_start": 21,
+        "http_response": 21,
+        "call_end": 21,
+        "environment_start": 21,
+        "environment_end": 21,
+        "official_evaluation": 1
+      },
+      "exception_type_mentions": {
+        "NameError": 1
+      },
+      "finish_reason_counts": {
+        "stop": 21
+      },
+      "max_request_prompt_tokens": 6839,
+      "no_code_extraction_messages": 0,
+      "called_complete_task": true,
+      "trimmed_history_calls": 13,
+      "max_full_prompt_characters": 24020
+    },
+    {
+      "run_id": "run_20261102T231137_c693ecf494eb43d3b20ae8216f3fe78b",
+      "task_id": "afc0fce_2",
+      "status": "completed",
+      "failure_type": "task_failed",
+      "event_counts": {
+        "initial_state": 1,
+        "full_prompt": 50,
+        "call_start": 50,
+        "http_response": 50,
+        "call_end": 50,
+        "environment_start": 45,
+        "environment_end": 45,
+        "official_evaluation": 1
+      },
+      "exception_type_mentions": {},
+      "finish_reason_counts": {
+        "stop": 50
+      },
+      "max_request_prompt_tokens": 5903,
+      "no_code_extraction_messages": 4,
+      "called_complete_task": false,
+      "trimmed_history_calls": 34,
+      "max_full_prompt_characters": 23952
+    },
+    {
+      "run_id": "run_20261102T231451_f930d46cde424c7f9cfe0fdfa3be352f",
+      "task_id": "afc0fce_2",
+      "status": "completed",
+      "failure_type": "task_failed",
+      "event_counts": {
+        "initial_state": 1,
+        "full_prompt": 50,
+        "call_start": 50,
+        "http_response": 50,
+        "call_end": 50,
+        "environment_start": 49,
+        "environment_end": 49,
+        "official_evaluation": 1
+      },
+      "exception_type_mentions": {
+        "AttributeError": 1
+      },
+      "finish_reason_counts": {
+        "stop": 50
+      },
+      "max_request_prompt_tokens": 6828,
+      "no_code_extraction_messages": 0,
+      "called_complete_task": false,
+      "trimmed_history_calls": 36,
+      "max_full_prompt_characters": 23961
+    },
+    {
+      "run_id": "run_20261102T232100_6a716561bccb451cb385c4e83dbc4db2",
+      "task_id": "302c169_1",
+      "status": "completed",
+      "failure_type": "task_failed",
+      "event_counts": {
+        "initial_state": 1,
+        "full_prompt": 7,
+        "call_start": 7,
+        "http_response": 7,
+        "call_end": 7,
+        "environment_start": 7,
+        "environment_end": 7,
+        "official_evaluation": 1
+      },
+      "exception_type_mentions": {},
+      "finish_reason_counts": {
+        "stop": 7
+      },
+      "max_request_prompt_tokens": 4271,
+      "no_code_extraction_messages": 0,
+      "called_complete_task": true,
+      "trimmed_history_calls": 0,
+      "max_full_prompt_characters": 16681
+    },
+    {
+      "run_id": "run_20261102T232132_a96809c7496f42c4aaaa4484331449f9",
+      "task_id": "302c169_1",
+      "status": "completed",
+      "failure_type": "task_failed",
+      "event_counts": {
+        "initial_state": 1,
+        "full_prompt": 17,
+        "call_start": 17,
+        "http_response": 17,
+        "call_end": 17,
+        "environment_start": 15,
+        "environment_end": 15,
+        "official_evaluation": 1
+      },
+      "exception_type_mentions": {
+        "AttributeError": 1,
+        "KeyError": 1
+      },
+      "finish_reason_counts": {
+        "stop": 17
+      },
+      "max_request_prompt_tokens": 5916,
+      "no_code_extraction_messages": 2,
+      "called_complete_task": true,
+      "trimmed_history_calls": 1,
+      "max_full_prompt_characters": 23870
+    },
+    {
+      "run_id": "run_20261102T232244_c0930a27c7a14045be73acdf76e701ef",
+      "task_id": "e7a10f8_2",
+      "status": "completed",
+      "failure_type": "task_failed",
+      "event_counts": {
+        "initial_state": 1,
+        "full_prompt": 5,
+        "call_start": 5,
+        "http_response": 5,
+        "call_end": 5,
+        "environment_start": 5,
+        "environment_end": 5,
+        "official_evaluation": 1
+      },
+      "exception_type_mentions": {},
+      "finish_reason_counts": {
+        "stop": 5
+      },
+      "max_request_prompt_tokens": 3248,
+      "no_code_extraction_messages": 0,
+      "called_complete_task": true,
+      "trimmed_history_calls": 0,
+      "max_full_prompt_characters": 13028
+    },
+    {
+      "run_id": "run_20261102T232306_f6fb599c7d024d10a9cda0e8e0fe61c8",
+      "task_id": "e7a10f8_2",
+      "status": "completed",
+      "failure_type": "task_failed",
+      "event_counts": {
+        "initial_state": 1,
+        "full_prompt": 7,
+        "call_start": 7,
+        "http_response": 7,
+        "call_end": 7,
+        "environment_start": 7,
+        "environment_end": 7,
+        "official_evaluation": 1
+      },
+      "exception_type_mentions": {
+        "KeyError": 4
+      },
+      "finish_reason_counts": {
+        "stop": 7
+      },
+      "max_request_prompt_tokens": 5214,
+      "no_code_extraction_messages": 0,
+      "called_complete_task": true,
+      "trimmed_history_calls": 0,
+      "max_full_prompt_characters": 20541
+    },
+    {
+      "run_id": "run_20261102T232355_3b993ddb647440dd88ea35523749c55d",
+      "task_id": "22cc237_2",
+      "status": "completed",
+      "failure_type": "task_failed",
+      "event_counts": {
+        "initial_state": 1,
+        "full_prompt": 12,
+        "call_start": 12,
+        "http_response": 12,
+        "call_end": 12,
+        "environment_start": 12,
+        "environment_end": 12,
+        "official_evaluation": 1
+      },
+      "exception_type_mentions": {
+        "NameError": 1
+      },
+      "finish_reason_counts": {
+        "stop": 12
+      },
+      "max_request_prompt_tokens": 5572,
+      "no_code_extraction_messages": 0,
+      "called_complete_task": true,
+      "trimmed_history_calls": 0,
+      "max_full_prompt_characters": 22460
+    },
+    {
+      "run_id": "run_20261102T232504_017a9f874bd242acb2e475105922ac8b",
+      "task_id": "22cc237_2",
+      "status": "completed",
+      "failure_type": "task_failed",
+      "event_counts": {
+        "initial_state": 1,
+        "full_prompt": 9,
+        "call_start": 9,
+        "http_response": 9,
+        "call_end": 9,
+        "environment_start": 9,
+        "environment_end": 9,
+        "official_evaluation": 1
+      },
+      "exception_type_mentions": {
+        "IndexError": 1
+      },
+      "finish_reason_counts": {
+        "stop": 9
+      },
+      "max_request_prompt_tokens": 4709,
+      "no_code_extraction_messages": 0,
+      "called_complete_task": true,
+      "trimmed_history_calls": 0,
+      "max_full_prompt_characters": 18265
+    }
+  ],
+  "aggregate": {
+    "event_counts": {
+      "initial_state": 16,
+      "full_prompt": 311,
+      "call_start": 311,
+      "http_response": 310,
+      "call_end": 310,
+      "environment_start": 297,
+      "environment_end": 297,
+      "official_evaluation": 15
+    },
+    "finish_reason_counts": {
+      "stop": 298,
+      "length": 12
+    },
+    "max_request_prompt_tokens": 6865,
+    "runs_with_history_trimming": 8,
+    "trimmed_history_calls": 166,
+    "no_code_extraction_messages": 11,
+    "runs_with_no_code_messages": 3,
+    "complete_task_runs": 13,
+    "http_status_counts": {
+      "200": 310
+    }
+  },
+  "method_notes": [
+    "Derived only from baseline run IDs, saved event journals, worker logs and ledger. No model calls or rescoring performed by this diagnostic extraction.",
+    "Exception type mentions are text matches, not an exhaustive count of failed API calls.",
+    "No-code messages count exact official-parser worker-log messages, not primary execution failure_type.",
+    "complete_task marker counts executed code containing supervisor.complete_task; it does not certify correctness.",
+    "History trimming counted by the official [TRIMMED HISTORY] marker. Output length counted by returned finish_reason. One interrupted request has no response/usage.",
+    "No causal ablation or larger-model comparison has been run. Weight full-content hashes remain unverified."
+  ]
+}

@@ -304,7 +304,8 @@ def publish_baseline(config):
         git(["commit", "-m", "Record Qwen2.5 baseline outcomes and controlled timeout"])
     git(["push", "-u", "origin", "main"])
     head = git(["rev-parse", "HEAD"]).strip()
-    remote = git(["ls-remote", "origin", "refs/heads/main"]).split()[0]
+    push_url = git(["remote", "get-url", "--push", "origin"]).strip()
+    remote = git(["ls-remote", push_url, "refs/heads/main"]).split()[0]
     write_json(ROOT / "runtime/qwen25-batch-git.json", audit)
     if head != remote:
         raise RuntimeError("Local/remote main differ after push.")
